@@ -10,7 +10,7 @@
     font-size: 100%;
 }
 
-::selection {
+*::selection {
     background: #ffa500;
 }
 
