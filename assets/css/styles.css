@@ -12,6 +12,7 @@
 
 *::selection {
     background: #ffa500;
+    color: #fff;
 }
 
 .header{
@@ -250,6 +251,7 @@
     text-align: center;
     padding: 2.5rem 0;
     width: 100%;
+    user-select: none;
 }
 
 .heading span {
@@ -320,6 +322,7 @@
     width: 10rem;
     transition: all .5s;
     border: 1px solid var(--orange-);
+    cursor: pointer;
 }
 
 .book .row form .btn:hover {
