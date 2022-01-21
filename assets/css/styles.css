@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap');
+
+:root {
+    --orange-: #ffa500;
+}
+
+*{
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+}
+
+::selection {
+    background: #ffa500;
+}
+
+.header{
+    position: relative;
+}
+
+.navbar{
+    background-color: rgb(50, 50, 48);
+    min-height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 50;
+}
+
+.navbar__logo{
+    color: white;
+}
+
+.orange{
+    color: #ffa500;
+}
+
+.navbar .fas{
+    color: white;
+    font-size: x-large;
+}
+
+.navbar__icons{
+    display: flex;
+    gap: 1rem;
+}
+
+.search__bar{
+    position: absolute;
+    background-color: rgb(50, 50, 48);
+    min-height: 3.5rem;
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid gray;
+    top: -3.5rem;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    z-index: 40;
+}
+
+.search__bar input{
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: 0;
+    margin-left: 1rem;
+}
+
+.search__bar .fas{
+    color: white;
+    font-size: x-large;
+    margin-right: 1rem;
+}
+
+.move-down {
+	transform: translate(0, 7rem);
+	-webkit-transform: translate(0, 7rem);
+	-o-transform: translate(0, 7rem); 
+	-moz-transform: translate(0, 7rem);
+}
+
+.move-up {
+	transform: translate(0, 3.5);
+	-webkit-transform: translate(0, 3.5);
+	-o-transform: translate(0, 3.5rem); 
+	-moz-transform: translate(0, 3.5rem);
+}
+
+.menu{
+    position: absolute;
+    background-color: rgb(50, 50, 48);
+    border-top: 1px solid gray;
+    min-height: 25rem;
+    max-height: 25rem;
+    padding: 1rem 0;
+    z-index: 30;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.menu__item{
+    background-color: rgb(32, 35, 32);
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.menu__item-text{
+    color: white;
+    padding: 0.5rem 0;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.menu__item-text:hover{
+    color: var(--orange-);
+    cursor: pointer;
+}
+
+#mobile__menu-button:hover {
+    color: var(--orange-);
+}
+
+.fa-user:hover {
+    color: var(--orange-);
+    cursor: pointer;
+}
+
+.search__icon:hover {
+    color: var(--orange-);
+    cursor: pointer;
+}
+.move__down-menu {
+	transform: translate(0, 0rem);
+	-webkit-transform: translate(0, 0rem);
+	-o-transform: translate(0, 0rem); 
+	-moz-transform: translate(0, 0rem);
+}
+
+.move__up-menu {
+	transform: translate(0, -28.5rem);
+	-webkit-transform: translate(0, -28.5rem);
+	-o-transform: translate(0, -28.5rem); 
+	-moz-transform: translate(0, -28.5rem);
+}
+
+.desktop__menu{
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+    position: relative;
+    height: 100vh;
+    z-index: 20;
+}
+
+.home .content {
+    text-align: center;
+    width: 90%;
+    position: relative;
+    z-index: 40;
+}
+
+.home .content h3 {
+    font-size: 2.25rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+.home .content p {
+    font-size: 1.25rem;
+    color: #fff;
+    padding: .5rem 0;
+    margin-bottom: 2rem;
+}
+
+.home .content a {
+    font-size: 1rem;
+    color: var(--orange-);
+    padding: .5rem 2rem;
+    text-decoration: none;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(5px);
+    transition: all .5s;
+    user-select: none;
+    border-radius: 10rem;
+}
+
+.home .content a:hover {
+    background-color: #ffa60044;
+    color: #ffa600;
+    border: 1px solid var(--orange-);
+}
+
+.home .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .controls {
+    padding: .5rem;
+    border-radius: 5rem;
+    position: relative;
+    top: 4rem;
+    user-select: none;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(5px);
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home .controls .video-btn{
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+
+.home .controls .video-btn.active {
+    background: #ffa500;
+}
+
+.heading {
+    text-align: center;
+    padding: 2.5rem 0;
+    width: 100%;
+}
+
+.heading span {
+    font-size: 2rem;
+    background: rgba(255, 165, 0, .2);
+    color: var(--orange-);
+    border-radius: .5rem;
+    padding: .1rem .5rem;
+}
+
+.heading span.space {
+    background: none;
+}
+
+.book .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.book .row .image {
+    width: 100%;
+}
+
+.book .row .image img {
+    width: 100%;
+}
+
+.book .row form {
+    padding: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.book .row form .inputBox input {
+    width: 90%;
+    padding: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    font-size: .8rem;
+    color: #000;
+    text-transform: none;
+}
+
+.book .row form .inputBox input::placeholder {
+    color: #000;
+}
+
+.book .row form .inputBox input:focus {
+    outline: 1px solid var(--orange-);
+    background-color: #ffa60044;
+}
+
+.book .row form .btn {
+    font-size: 1rem;
+    color: #fff;
+    padding: .5rem 2rem;
+    text-decoration: none;
+    background: var(--orange-);
+    user-select: none;
+    outline: none;
+    border: none;
+    margin-top: 2rem;
+    width: 10rem;
+    transition: all .5s;
+    border: 1px solid var(--orange-);
+}
+
+.book .row form .btn:hover {
+    background-color: #ffa60044;
+    color: #ffa600;
+    border: 1px solid var(--orange-);
+}
+
+.book .row form .inputBox h3 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: var(--orange-);
+}
+
+
+@media (min-width: 640px) {
+    .home .content h3 {
+        font-size: 3rem;
+    }
+    
+    .home .content p {
+        font-size: 1.5rem;
+        margin-bottom: 4rem;
+    }
+    
+    .home .content a {
+        font-size: 1.25rem;
+        padding: .75rem 2.5rem;
+    }
+    
+    .home .controls {
+        padding: 1rem 1.5rem;
+        top: 5rem;
+    }
+    
+    .home .controls .video-btn{
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+
+    .heading {
+        text-align: center;
+        padding: 2.5rem 0;
+        width: 100%;
+    }
+    
+    .heading span {
+        font-size: 3rem;
+        background: rgba(255, 165, 0, .2);
+        color: var(--orange-);
+        border-radius: .5rem;
+        padding: .2rem 1rem;
+    }
+
+    .book .row form .inputBox input {
+        width: 95%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .book .row form .btn {
+        font-size: 1.5rem;
+        width: 15rem;
+    }
+
+    .book .row form .inputBox h3 {
+        font-size: 2rem;
+        padding: 1rem 0;
+        color: var(--orange-);
+    }
+}
+
+@media (min-width: 1025px ) {
+    #mobile__menu-button{
+         display: none;}
+    .desktop__menu{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .desktop__menu .menu__item-text{
+        font-size: large;
+    }
+    
+    .home .content h3 {
+        font-size: 4rem;
+    }
+    
+    .home .content p {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .home .content a {
+        font-size: 2rem;
+        padding: .5rem 4rem;
+    }
+    
+    .home .controls {
+        padding: 1rem 2rem;
+        top: 5rem;
+    }
+    
+    .home .controls .video-btn{
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .book .row {
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .book {
+        overflow: hidden;
+    }
+    
+    .book .row .image {
+        width: 45%;
+    }
+    
+    .book .row form {
+        width: 45%;
+    }
+    
+    .heading span {
+        font-size: 4rem;
+        background: rgba(255, 165, 0, .2);
+        color: var(--orange-);
+        border-radius: .5rem;
+        padding: .2rem 1.25rem;
+    }
+
+    .book .row form .inputBox input {
+        width: 95%;
+        padding: 1.25rem;
+        font-size: 1.25rem;
+    }
+    
+    .book .row form .btn {
+        font-size: 1.75rem;
+        width: 20rem;
+    }
+
+    .book .row form .inputBox h3 {
+        font-size: 2.5rem;
+        padding: 1rem 0;
+        color: var(--orange-);
+    }
+}

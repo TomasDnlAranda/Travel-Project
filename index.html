@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Travel Web</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <i class="fas fa-bars" id="mobile__menu-button"></i>
+            <h1 class="navbar__logo"><span class="orange">T</span>RAVEL</h1>
+            <div class="desktop__menu">
+                <a class="menu__item-text">Home</a>
+                <a class="menu__item-text">Book</a>
+                <a class="menu__item-text">Packages</a>
+                <a class="menu__item-text">Services</a>
+                <a class="menu__item-text">Gallery</a>
+                <a class="menu__item-text">Review</a>
+                <a class="menu__item-text">Contact</a>
+            </div>
+            <div class="navbar__icons">
+                <i class="fas fa-user"></i>
+                <i class="search__icon fas fa-search" id="search__button"></i>
+            </div>
+        </nav>
+        <div class="search__bar" id="search__bar">
+            <input type="search" placeholder="search here...">
+            <i class="fas fa-search"></i>
+        </div> 
+        <div class="menu move__up-menu" id="mobile__menu">
+            <div class="menu__item"><p class="menu__item-text">Home</p></div>
+            <div class="menu__item"><p class="menu__item-text">Book</p></div>
+            <div class="menu__item"><p class="menu__item-text">Packages</p></div>
+            <div class="menu__item"><p class="menu__item-text">Services</p></div>
+            <div class="menu__item"><p class="menu__item-text">Gallery</p></div>
+            <div class="menu__item"><p class="menu__item-text">Review</p></div>
+            <div class="menu__item"><p class="menu__item-text">Contact</p></div>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>adventure is worthwhile</h3>
+            <p>Dicover New Places With Us, Adventure Awaits</p>
+            <a href="#" class="btn">Discover More</a>
+        </div>
+        <div class="controls">
+            <span class="video-btn active" data-src="./images/Pexels Videos 4098.mp4"></span>
+            <span class="video-btn" data-src="./images/production ID_4460100.mp4"></span>
+            <span class="video-btn" data-src="./images/about-vid-1.mp4"></span>
+            <span class="video-btn" data-src="./images/about-vid-2.mp4"></span>
+            <span class="video-btn" data-src="./images/about-vid-3.mp4"></span>
+        </div>
+        <div class="video-container">
+            <video src="./images/Pexels Videos 4098.mp4" id="video-slider" loop autoplay muted></video>
+        </div>
+    </section>
+    <section class="book" id="book">
+        <h3 class="heading">
+            <span class="card">b</span>
+            <span class="card">o</span>
+            <span class="card">o</span>
+            <span class="card">k</span>
+            <span class="space"></span>
+            <span class="card">n</span>
+            <span class="card">o</span>
+            <span class="card">w</span>
+        </h3>
+        <div class="row">
+            <div class="image">
+                <img src="./images/home-img.svg" alt="book-svg">
+            </div>
+            <form action="">
+                <div class="inputBox">
+                    <h3>Where To</h3>
+                    <input type="text" placeholder="place name">
+                </div>
+                <div class="inputBox">
+                    <h3>How Many</h3>
+                    <input type="number" placeholder="number of guest">
+                </div>
+                <div class="inputBox">
+                    <h3>Arrivals</h3>
+                    <input type="date">
+                </div>
+                <div class="inputBox">
+                    <h3>Leaving</h3>
+                    <input type="date">
+                </div>
+                <input type="submit" class="btn">
+            </form>
+        </div>
+    </section>
+<script src="assets/js/index.js"></script>
+<script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+    });
+</script>
+</body>
+</html>
