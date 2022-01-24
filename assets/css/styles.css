@@ -168,7 +168,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-width: 100%;
+    max-width: 100%;
     position: relative;
     height: 100vh;
     z-index: 20;
@@ -271,19 +271,24 @@ body {
     background: none;
 }
 
+.book {
+    max-width: 100vw;
+}
+
 .book .row {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
+    max-width: 100vw;
     overflow: hidden;
 }
 
 .book .row .image {
-    width: 100%;
+    max-width: 100vw;
 }
 
 .book .row .image img {
     width: 100%;
+    height: auto;
 }
 
 .book .row form {
@@ -360,7 +365,7 @@ body {
 }
 
 .container-carousel{
-    width: 90%;
+    max-width: 90vw;
     margin: 0 auto;
     padding: 10px 40px;
     display: flex;
@@ -442,6 +447,68 @@ body {
     font-size: larger;
     margin: 1rem 1rem;
 }
+
+.services {
+    margin: 1rem 0 0 0;
+    padding: 0 0 2rem 0;
+}
+
+.service__container {
+    width: max-content;
+    margin: 0 auto;
+}
+.services .service__container span {
+    font-size: 2rem;
+    background: rgba(255, 165, 0, .2);
+    color: var(--orange-);
+    border-radius: .5rem;
+    padding: .1rem .5rem;
+}
+
+.service__card-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service__card {
+    display: flex;
+    flex-direction: column; 
+    padding: 1rem;
+    margin: 0 2rem;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.service__card:hover {
+    box-shadow: 9px 7px 25px -7px rgba(0,0,0,0.53);
+-webkit-box-shadow: 9px 7px 25px -7px rgba(0,0,0,0.53);
+-moz-box-shadow: 9px 7px 25px -7px rgba(0,0,0,0.53);
+}
+
+.service__card i {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    color: var(--orange-);
+}
+
+.service__card span {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    font-weight: bold
+}
+
+.service__card p {
+    font-size: .75rem;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: .5rem;
+    color: rgb(94, 93, 93);
+}
+
 @media (min-width: 640px) {
     .home .content h3 {
         font-size: 3rem;
@@ -496,6 +563,26 @@ body {
         font-size: 2rem;
         padding: 1rem 0;
         color: var(--orange-);
+    }
+
+    .services {
+        margin-top: 2rem;
+    }
+    .services .service__container span {
+        font-size: 3rem;
+        background: rgba(255, 165, 0, .2);
+        color: var(--orange-);
+        border-radius: .5rem;
+        padding: .2rem 1rem;
+    }
+
+    .service__card {
+        width: 42.5%;
+        margin: 1rem .5rem;
+    }
+
+    .service__card-conteiner {
+        margin-top: 2rem;
     }
 }
 
@@ -576,5 +663,10 @@ body {
         font-size: 2.5rem;
         padding: 1rem 0;
         color: var(--orange-);
+    }
+
+    .service__card {
+        width: 25%;
+        margin: 1rem;
     }
 }
