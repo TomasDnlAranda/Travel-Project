@@ -351,6 +351,7 @@ body {
     align-self: center;
     font-size: 3rem;
     color: rgba(255, 165, 0, .2);
+    display: none;
 }
 .swipe-button:hover{
     color: var(--orange-);
@@ -390,6 +391,7 @@ body {
     border-radius: 2%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     cursor: pointer;
+    margin-bottom: 1rem;
   }
 
 .swiper-slide img {
@@ -518,7 +520,24 @@ body {
     margin-top: .5rem;
     color: rgb(94, 93, 93);
 }
-
+.gallery{
+    display: grid;
+    gap: 1rem;
+}
+.image_container{
+  padding: 5px;
+  background-color: white;
+  max-height: 40vh;
+  min-height: 40vh;
+  margin: 0 1rem;
+  border-radius: 1%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.image_container img{
+    width: 100%;
+    max-height: calc(40vh ) !important;
+    object-fit: cover;
+}
 .review {
     margin: 1rem 0;
 }
@@ -660,6 +679,14 @@ body {
         padding: .2rem 1rem;
         font-weight: bold
     }
+
+    .gallery{
+        grid-template-columns: repeat(2, 50%);
+        margin: 0 auto;
+    }
+    .swipe-button{
+        display: block;
+    }
     
     
 }
@@ -768,5 +795,12 @@ body {
         border-radius: .5rem;
         padding: .2rem 1.25rem;
         font-weight: bold
+    }
+    .gallery{
+        grid-template-columns: repeat(3, 30%);
+        justify-content: center;
+    }
+    .swipe-button{
+        display: block;
     }
 }
