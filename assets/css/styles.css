@@ -389,7 +389,7 @@ body {
     align-items: flex-start;
     border-radius: 2%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-
+    cursor: pointer;
   }
 
 .swiper-slide img {
@@ -400,8 +400,6 @@ body {
     border-top-left-radius: inherit;
     object-fit: cover;
   }
-
-
 
 .place{
     display: flex;
@@ -437,6 +435,7 @@ body {
     text-decoration: line-through;
     color: gray;
 }
+
 .book-now{
     border: none;
     width: 50%;
@@ -446,6 +445,14 @@ body {
     font-weight: bold;
     font-size: larger;
     margin: 1rem 1rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.book-now:hover {
+    background-color: #ffa60044;
+    color: #ffa600;
+    border: 1px solid var(--orange-);
 }
 
 .services {
@@ -480,6 +487,7 @@ body {
     margin: 0 2rem;
     width: 100%;
     margin-top: 3rem;
+    user-select: none;
 }
 
 .service__card:hover {
@@ -504,6 +512,59 @@ body {
 }
 
 .service__card p {
+    font-size: .75rem;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: .5rem;
+    color: rgb(94, 93, 93);
+}
+
+.review {
+    margin: 1rem 0;
+}
+
+.review__container-title {
+    width: max-content;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.review__container-title span {
+    font-size: 2rem;
+    background: rgba(255, 165, 0, .2);
+    color: var(--orange-);
+    border-radius: .5rem;
+    padding: .1rem .5rem;
+    font-weight: bold
+}
+
+.review__swiper-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    width: max-content;
+    user-select: none;
+    cursor: pointer;
+}
+
+.review__container-img img {
+    border-radius: 50%;
+    height: auto;
+    width: 7.5rem;
+}
+
+.review__swiper-card span {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    font-weight: bold
+}
+
+.review__swiper-card p {
     font-size: .75rem;
     margin: 0 auto;
     width: 80%;
@@ -586,6 +647,21 @@ body {
     .service__card-conteiner {
         margin-top: 2rem;
     }
+
+    .review__container-title {
+        margin-bottom: 1rem;
+    }
+
+    .review__container-title span {
+        font-size: 3rem;
+        background: rgba(255, 165, 0, .2);
+        color: var(--orange-);
+        border-radius: .5rem;
+        padding: .2rem 1rem;
+        font-weight: bold
+    }
+    
+    
 }
 
 @media (min-width: 1025px ) {
@@ -679,5 +755,18 @@ body {
         color: var(--orange-);
         border-radius: .5rem;
         padding: .2rem 1.25rem;
+    }
+
+    .review__container-title {
+        margin-bottom: 2.5rem;
+    }
+
+    .review__container-title span {
+        font-size: 4rem;
+        background: rgba(255, 165, 0, .2);
+        color: var(--orange-);
+        border-radius: .5rem;
+        padding: .2rem 1.25rem;
+        font-weight: bold
     }
 }
