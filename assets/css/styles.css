@@ -462,6 +462,10 @@ body {
     padding: 0 0 2rem 0;
 }
 
+.swiper-wrapper {
+    margin-bottom: 2rem;
+}
+
 .service__container {
     width: max-content;
     margin: 0 auto;
@@ -591,6 +595,7 @@ body {
     color: rgb(94, 93, 93);
 }
 
+
 @media (min-width: 640px) {
     .home .content h3 {
         font-size: 3rem;
@@ -684,10 +689,14 @@ body {
         grid-template-columns: repeat(2, 50%);
         margin: 0 auto;
     }
+
     .swipe-button{
         display: block;
     }
     
+    .swiper-pagination-responsive {
+        display: none;
+    }
     
 }
 
