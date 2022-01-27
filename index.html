@@ -289,29 +289,72 @@
     <section class="gallery">
         
         <div class="image_container">
-            <img src="images/gallery-img-1.jpg" alt="" srcset="">
+            <img src="images/gallery-img-7.jpg" alt="" srcset="">
+            <span></span>
+            <div class="content">
+                <div>
+                    <h2>Amazing places</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque deserunt tempora aperiam expedita</p>
+                </div>
+                
+            </div>
         </div>
         <div class="image_container">
-            <img src="images/gallery-img-1.jpg" alt="" srcset="">
+            <img src="images/gallery-img-5.jpg" alt="" srcset="">
+            <span></span>
+            <div class="content">
+                <div>
+                    <h2>Amazing places</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque deserunt tempora aperiam expedita</p>
+                </div>
+                
+            </div>
         </div>
         <div class="image_container">
-            <img src="images/gallery-img-1.jpg" alt="" srcset="">
+            <img src="images/gallery-img-4.jpg" alt="" srcset="">
+            <span></span>
+            <div class="content">
+                <div>
+                    <h2>Amazing places</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque deserunt tempora aperiam expedita</p>
+                </div>
+                
+            </div>
         </div>
         <div class="image_container">
-            <img src="images/gallery-img-1.jpg" alt="" srcset="">
+            <img src="images/gallery-img-8.jpg" alt="" srcset="">
+            <span></span>
+            <div class="content">
+                <div>
+                    <h2>Amazing places</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque deserunt tempora aperiam expedita</p>
+                </div>
+                
+            </div>
         </div>
         <div class="image_container">
-            <img src="images/gallery-img-1.jpg" alt="" srcset="">
+            <img src="images/gallery-img-2.jpg" alt="" srcset="">
+            <span></span>
+            <div class="content">
+                <div>
+                    <h2>Amazing places</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque deserunt tempora aperiam expedita</p>
+                </div>
+                
+            </div>
         </div>
         <div class="image_container">
-            <img src="images/gallery-img-1.jpg" alt="" srcset="">
+            <img src="images/gallery-img-3.jpg" alt="" srcset="">
+            <span></span>
+            <div class="content">
+                <div>
+                    <h2>Amazing places</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cumque deserunt tempora aperiam expedita</p>
+                </div>
+                
+            </div>
         </div>
-        <div class="image_container">
-            <img src="images/gallery-img-1.jpg" alt="" srcset="">
-        </div>
-        <div class="image_container">
-            <img src="images/gallery-img-1.jpg" alt="" srcset="">
-        </div>
+        
     </section>
     <div class="review">
         <h3 class="heading">
@@ -398,6 +441,25 @@
             <div class="swiper-pagination"></div>
           </div>
     </div>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>
+<script>
+    $(document).ready(function(){
+	$('.image_container').on('mouseenter', function(e){
+		x = e.pageX - $(this).offset().left,
+		y = e.pageY - $(this).offset().top;
+		$(this).find('span').css({top:y, left:x})
+	});
+	$('.image_container').on('mouseout', function(e){
+		x = e.pageX - $(this).offset().left,
+		y = e.pageY - $(this).offset().top;
+		$(this).find('span').css({top:y, left:x})
+	})
+})
+</script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/index.js"></script>
 <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
