@@ -529,19 +529,75 @@ body {
     gap: 1rem;
 }
 .image_container{
-  padding: 5px;
+  position: relative;
+  
   background-color: white;
-  max-height: 40vh;
+  max-height: 50vh;
   min-height: 40vh;
-  margin: 0 1rem;
-  border-radius: 1%;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  
+  overflow: hidden;
+  margin: 0 2rem;
 }
 .image_container img{
+    position: absolute;
     width: 100%;
-    max-height: calc(40vh ) !important;
+    height: 100%;
     object-fit: cover;
 }
+
+.image_container span{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    opacity: 0.95;
+    background: var(--orange-);
+    z-index: 1;
+    transition: width 0.5s, height 0.5s;
+    transform: translate(-50%, -50%);
+}
+.image_container:hover span{
+    width: 1000px;
+    height: 1000px;
+}
+
+.image_container .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.image_container .content div{
+    padding: 40px;
+    color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.2s;
+    visibility: hidden;
+
+}
+.image_container .content div h2{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.image_container .content div p{
+    font-size: 1.3rem;
+}
+
+.image_container:hover .content div{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: 0.2s;
+    visibility: visible;
+}
+
+
 .review {
     margin: 1rem 0;
 }
@@ -689,6 +745,11 @@ body {
         grid-template-columns: repeat(2, 50%);
         margin: 0 auto;
     }
+    .image_container{
+        
+        margin: 0;
+      }
+
 
     .swipe-button{
         display: block;
@@ -808,6 +869,7 @@ body {
     .gallery{
         grid-template-columns: repeat(3, 30%);
         justify-content: center;
+        margin: 0 4rem;
     }
     .swipe-button{
         display: block;
