@@ -4,6 +4,20 @@
     --orange-: #ffa500;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255); 
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--orange-);
+    border-radius: 20px;
+    border: 3px solid var(--orange-); 
+  }
+
 *{
     margin: 0;
     font-family: 'Nunito', sans-serif;
