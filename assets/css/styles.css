@@ -517,9 +517,9 @@ body {
 }
 
 .service__card:hover {
-    box-shadow: 9px 7px 25px -7px rgba(0,0,0,0.53);
--webkit-box-shadow: 9px 7px 25px -7px rgba(0,0,0,0.53);
--moz-box-shadow: 9px 7px 25px -7px rgba(0,0,0,0.53);
+    box-shadow: 9px 7px 25px -7px rgba(0, 0, 0, 0.392);
+-webkit-box-shadow: 9px 7px 25px -7px rgba(0, 0, 0, 0.392);
+-moz-box-shadow: 9px 7px 25px -7px rgba(0, 0, 0, 0.392);
 }
 
 .service__card i {
