@@ -1,15 +1,35 @@
+/* ============= agg font ============= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap');
 
+/* ============= start variable ============= */
 :root {
     --orange-: #ffa500;
+    --white-: #ffffff;
+    --gray-light: #323230;
+    --black-: #000000;
+    --gray-: #808080;
+    --orange-hover-: #ffa60044;
+    --color-shadow-: #0000001a;
+    --gray-swiper-: #464748;
+    --color-menu: #202320;
+}
+/* ============= end variable ============= */
+
+
+/* ============= start HTML y body ============= */
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
 }
 
 body::-webkit-scrollbar {
     width: 12px;
-  }
+}
   
 body::-webkit-scrollbar-track {
-background: rgb(255, 255, 255); 
+    background: var(--white-); 
 }
   
 body::-webkit-scrollbar-thumb {
@@ -18,10 +38,15 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid var(--orange-); 
 }
 
+body {
+        position: relative;
+        height: 100%;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
-
 
 *{
     margin: 0;
@@ -30,21 +55,20 @@ html {
 }
 
 *::selection {
-    background: #ffa500;
-    color: #fff;
+    background: var(--orange-);
+    color: var(--white-);
 }
-body {
-        position: relative;
-        height: 100%;
-}
+/* ============= end HMTL y body ============= */
 
 
+
+/* ============= start header area ============= */
 .header{
     position: relative;
 }
 
 .navbar{
-    background-color: rgb(50, 50, 48);
+    background-color: var(--gray-light);
     min-height: 4rem;
     display: flex;
     justify-content: space-between;
@@ -55,15 +79,15 @@ body {
 }
 
 .navbar__logo{
-    color: white;
+    color: var(--white-);
 }
 
 .orange{
-    color: #ffa500;
+    color: var(--orange-);
 }
 
 .navbar .fas{
-    color: white;
+    color: var(--white-);
     font-size: x-large;
 }
 
@@ -74,14 +98,14 @@ body {
 
 .search__bar{
     position: absolute;
-    background-color: rgb(50, 50, 48);
+    background-color: var(--gray-light);
     min-height: 3.5rem;
     max-width: 100%;
     min-width: 100%;
     display: flex;
     align-items: center;
     gap: 1rem;
-    border-top: 1px solid gray;
+    border-top: 1px solid var(--gray-);
     top: -3.5rem;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
@@ -99,7 +123,7 @@ body {
 }
 
 .search__bar .fas{
-    color: white;
+    color: var(--white-);
     font-size: x-large;
     margin-right: 1rem;
 }
@@ -120,8 +144,8 @@ body {
 
 .menu{
     position: absolute;
-    background-color: rgb(50, 50, 48);
-    border-top: 1px solid gray;
+    background-color: var(--gray-light);
+    border-top: 1px solid var(--gray-);
     min-height: 25rem;
     max-height: 25rem;
     padding: 1rem 0;
@@ -134,13 +158,13 @@ body {
 }
 
 .menu__item{
-    background-color: rgb(32, 35, 32);
+    background-color: var(--color-menu);
     border-radius: 0.5rem;
     margin: 1rem;
 }
 
 .menu__item-text{
-    color: white;
+    color: var(--white-);
     padding: 0.5rem 0;
     margin-left: 1rem;
     cursor: pointer;
@@ -165,6 +189,7 @@ body {
     color: var(--orange-);
     cursor: pointer;
 }
+
 .move__down-menu {
 	transform: translate(0, 0rem);
 	-webkit-transform: translate(0, 0rem);
@@ -182,7 +207,11 @@ body {
 .desktop__menu{
     display: none;
 }
+/* ============= end header area ============= */
 
+
+
+/* ============= start home area ============= */
 .home {
     display: flex;
     justify-content: center;
@@ -203,14 +232,14 @@ body {
 
 .home .content h3 {
     font-size: 2.25rem;
-    color: #fff;
+    color: var(--white-);
     text-transform: uppercase;
     text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
 }
 
 .home .content p {
     font-size: 1.25rem;
-    color: #fff;
+    color: var(--white-);
     padding: .5rem 0;
     margin-bottom: 2rem;
 }
@@ -220,7 +249,7 @@ body {
     color: var(--orange-);
     padding: .5rem 2rem;
     text-decoration: none;
-    background: rgba(0,0,0,.5);
+    background: var(--color-shadow-);
     backdrop-filter: blur(5px);
     transition: all .5s;
     user-select: none;
@@ -228,8 +257,8 @@ body {
 }
 
 .home .content a:hover {
-    background-color: #ffa60044;
-    color: #ffa600;
+    background-color: var(--orange-hover-);
+    color: var(--orange-);
     border: 1px solid var(--orange-);
 }
 
@@ -249,7 +278,7 @@ body {
     position: relative;
     top: 4rem;
     user-select: none;
-    background: rgba(0,0,0,.5);
+    background: var(--color-shadow-);
     backdrop-filter: blur(5px);
     margin: 0 1rem;
     display: flex;
@@ -263,13 +292,13 @@ body {
     width: 1.5rem;
     display: inline-block;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    background-color: #fff;
+    background-color: var(--white-);
     cursor: pointer;
     margin: 0 .5rem;
 }
 
 .home .controls .video-btn.active {
-    background: #ffa500;
+    background: var(--orange-);
 }
 
 .heading {
@@ -281,7 +310,7 @@ body {
 
 .heading span {
     font-size: 2rem;
-    background: rgba(255, 165, 0, .2);
+    background: var(--orange-hover-);
     color: var(--orange-);
     border-radius: .5rem;
     padding: .1rem .5rem;
@@ -326,22 +355,22 @@ body {
     padding: .5rem;
     border: .1rem solid rgba(0,0,0,.1);
     font-size: .8rem;
-    color: #000;
+    color: var(--black-);
     text-transform: none;
 }
 
 .book .row form .inputBox input::placeholder {
-    color: #000;
+    color: var(--black-);
 }
 
 .book .row form .inputBox input:focus {
     outline: 1px solid var(--orange-);
-    background-color: #ffa60044;
+    background-color: var(--orange-hover-);
 }
 
 .book .row form .btn {
     font-size: 1rem;
-    color: #fff;
+    color: var(--white-);
     padding: .5rem 2rem;
     text-decoration: none;
     background: var(--orange-);
@@ -356,8 +385,8 @@ body {
 }
 
 .book .row form .btn:hover {
-    background-color: #ffa60044;
-    color: #ffa600;
+    background-color: var(--orange-hover-);
+    color: var(--orange-);
     border: 1px solid var(--orange-);
 }
 
@@ -367,20 +396,46 @@ body {
     color: var(--orange-);
 }
 
+.book-now{
+    border: none;
+    width: 50%;
+    min-height: 3rem;
+    background-color: var(--orange-);
+    color: var(--white-);
+    font-weight: bold;
+    font-size: larger;
+    margin: 1rem 1rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.book-now:hover {
+    background-color: var(--orange-hover-);
+    color: var(--orange-);
+    border: 1px solid var(--orange-);
+}
+/* ============= end home area ============= */
+
+
+
+/* ============= start packages area ============= */
 .swipe-button{
     align-self: center;
     font-size: 3rem;
-    color: rgba(255, 165, 0, .2);
+    color: var(--orange-hover-);
     display: none;
 }
+
 .swipe-button:hover{
     color: var(--orange-);
     transition: 0.5s;
     cursor: pointer;
 }
+
 .swipe-right{
     margin-left: 1.5rem;
 }
+
 .swipe-left{
     margin-right: 1.5rem;
 }
@@ -390,21 +445,23 @@ body {
     margin: 0 auto;
     padding: 10px 40px;
     display: flex;
-  }
+}
+
 .container .swiper-container{
     width: 100%;
     height: 100%;
-  }
+}
+
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
 .swiper-slide {
     position: relative;
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: var(--white-);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -427,21 +484,25 @@ body {
     display: flex;
     align-items: center;
     margin: 1rem 1rem;
-    color: rgb(50, 50, 48);
+    color: var(--gray-light);
     font-size: 1.3rem;
 }
+
 .place i{
     color: var(--orange-);
     margin-right: 0.5rem;
 }
+
 .swiper-item p{
     text-align: left;
     margin: 0 1rem;
-    color: #464748;
+    color: var(--gray-swiper-);
 }
+
 .stars {
     margin: 0.5rem 1rem;
 }
+
 .fa-star{
     color: var(--orange-);
     
@@ -449,34 +510,20 @@ body {
 
 .price{
     font-size: x-large;
-    color: #464748;
+    color: var(--gray-swiper-);
     margin-bottom: 1rem;
 }
+
 .price span{
     font-size: smaller;
     text-decoration: line-through;
-    color: gray;
+    color: var(--gray-);
 }
+/* ============= end packages area ============= */
 
-.book-now{
-    border: none;
-    width: 50%;
-    min-height: 3rem;
-    background-color: var(--orange-);
-    color: white;
-    font-weight: bold;
-    font-size: larger;
-    margin: 1rem 1rem;
-    transition: all .5s;
-    cursor: pointer;
-}
 
-.book-now:hover {
-    background-color: #ffa60044;
-    color: #ffa600;
-    border: 1px solid var(--orange-);
-}
 
+/* ============= start services area ============= */
 .services {
     margin: 1rem 0 0 0;
     padding: 0 0 2rem 0;
@@ -491,9 +538,10 @@ body {
     margin: 0 auto;
     user-select: none;
 }
+
 .services .service__container span {
     font-size: 2rem;
-    background: rgba(255, 165, 0, .2);
+    background: var(--orange-hover-);
     color: var(--orange-);
     border-radius: .5rem;
     padding: .1rem .5rem;
@@ -542,22 +590,29 @@ body {
     margin: 0 auto;
     width: 80%;
     margin-top: .5rem;
-    color: rgb(94, 93, 93);
+    color: var(--gray-light);
 }
+/* ============= end services area ============= */
+
+
+
+/* ============= start gallery area ============= */
 .gallery{
     display: grid;
     gap: 1rem;
 }
+
 .image_container{
   position: relative;
   
-  background-color: white;
+  background-color: var(--white-);
   max-height: 50vh;
   min-height: 40vh;
   
   overflow: hidden;
   margin: 0 2rem;
 }
+
 .image_container img{
     position: absolute;
     width: 100%;
@@ -577,6 +632,7 @@ body {
     transition: width 0.5s, height 0.5s;
     transform: translate(-50%, -50%);
 }
+
 .image_container:hover span{
     width: 1000px;
     height: 1000px;
@@ -593,19 +649,22 @@ body {
     justify-content: center;
     z-index: 2;
 }
+
 .image_container .content div{
     padding: 40px;
-    color: white;
+    color: var(--white-);
     opacity: 0;
     transform: translateY(50px);
     transition: 0.2s;
     visibility: hidden;
 
 }
+
 .image_container .content div h2{
     font-size: xx-large;
     font-weight: bold;
 }
+
 .image_container .content div p{
     font-size: 1.3rem;
 }
@@ -616,8 +675,11 @@ body {
     transition: 0.2s;
     visibility: visible;
 }
+/* ============= end gallery area ============= */
 
 
+
+/* ============= start review area ============= */
 .review {
     margin: 1rem 0;
 }
@@ -630,7 +692,7 @@ body {
 
 .review__container-title span {
     font-size: 2rem;
-    background: rgba(255, 165, 0, .2);
+    background: var(--orange-hover-);
     color: var(--orange-);
     border-radius: .5rem;
     padding: .1rem .5rem;
@@ -668,10 +730,12 @@ body {
     margin: 0 auto;
     width: 80%;
     margin-top: .5rem;
-    color: rgb(94, 93, 93);
+    color: var(--gray-light);
 }
+/* ============= end review area ============= */
 
 
+/* ============= start breakpoint 640px ============= */
 @media (min-width: 640px) {
     .home .content h3 {
         font-size: 3rem;
@@ -705,7 +769,7 @@ body {
     
     .heading span {
         font-size: 3rem;
-        background: rgba(255, 165, 0, .2);
+        background: var(--orange-hover-);
         color: var(--orange-);
         border-radius: .5rem;
         padding: .2rem 1rem;
@@ -731,9 +795,10 @@ body {
     .services {
         margin-top: 2rem;
     }
+
     .services .service__container span {
         font-size: 3rem;
-        background: rgba(255, 165, 0, .2);
+        background: var(--orange-hover-);
         color: var(--orange-);
         border-radius: .5rem;
         padding: .2rem 1rem;
@@ -754,7 +819,7 @@ body {
 
     .review__container-title span {
         font-size: 3rem;
-        background: rgba(255, 165, 0, .2);
+        background: var(--orange-hover-);
         color: var(--orange-);
         border-radius: .5rem;
         padding: .2rem 1rem;
@@ -765,11 +830,10 @@ body {
         grid-template-columns: repeat(2, 50%);
         margin: 0 auto;
     }
+
     .image_container{
-        
         margin: 0;
       }
-
 
     .swipe-button{
         display: block;
@@ -780,15 +844,21 @@ body {
     }
     
 }
+/* ============= end breakpoint 640px ============= */
 
+
+
+/* ============= start breakpoint 1025px ============= */
 @media (min-width: 1025px ) {
     #mobile__menu-button{
-         display: none;}
+         display: none;
+    }
+
     .desktop__menu{
         display: flex;
         flex-direction: row;
-        
     }
+
     .desktop__menu .menu__item-text{
         font-size: large;
     }
@@ -837,7 +907,7 @@ body {
     
     .heading span {
         font-size: 4rem;
-        background: rgba(255, 165, 0, .2);
+        background: var(--orange-hover-);
         color: var(--orange-);
         border-radius: .5rem;
         padding: .2rem 1.25rem;
@@ -868,7 +938,7 @@ body {
 
     .services .service__container span {
         font-size: 4rem;
-        background: rgba(255, 165, 0, .2);
+        background: var(--orange-hover-);
         color: var(--orange-);
         border-radius: .5rem;
         padding: .2rem 1.25rem;
@@ -880,18 +950,21 @@ body {
 
     .review__container-title span {
         font-size: 4rem;
-        background: rgba(255, 165, 0, .2);
+        background: var(--orange-hover-);
         color: var(--orange-);
         border-radius: .5rem;
         padding: .2rem 1.25rem;
         font-weight: bold
     }
+
     .gallery{
         grid-template-columns: repeat(3, 30%);
         justify-content: center;
         margin: 0 4rem;
     }
+
     .swipe-button{
         display: block;
     }
 }
+/* ============= end breakpoint 1025px ============= */
