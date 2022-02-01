@@ -61,7 +61,7 @@
     <!-- ============================ start section main area ============================ -->
     <section class="home" id="home">
         <div class="content">
-            <h3><span>adventure i<span class="orange">s worthwhile</span></span></h3>
+            <h3><span>adventure i<span class="orange typed-h3"></span></span></h3>
             <p>Dicover New Places With Us, Adventure Awaits</p>
             <a href="#" class="btn">Discover More</a>
         </div>
@@ -506,6 +506,9 @@
 <!-- script swiper -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
+<!-- script typed -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 <!-- script setting tilt -->
 <script>
     VanillaTilt.init(document.querySelectorAll(".card"), {
@@ -515,8 +518,24 @@
         "max-glare": 1,
     });
 </script>
-<!-- ============================ end script ============================ -->
 
+<!-- script setting typed -->
+<script>
+    var typed = new Typed('.typed-h3', {
+      strings: [
+          's worthwhile', 
+          's inspire',
+          's discover',
+          's happiness',
+          'jsjsakajskas quedo o no quedo, my bro? despues cuando veas esto configuralo estoy en la linea 532 y donde dice loop ponelo en true!'
+        ],
+        typeSpeed: 80,
+        backSpeed: 60,
+        loop: false,
+      smartBackspace: true // Default value
+    });
+</script>
+<!-- ============================ end script ============================ -->
 
 </body>
 </html>

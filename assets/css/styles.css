@@ -607,11 +607,9 @@ html {
 
 .image_container{
   position: relative;
-  
   background-color: var(--white-);
   max-height: 50vh;
   min-height: 40vh;
-  
   overflow: hidden;
   margin: 0 2rem;
 }
@@ -845,6 +843,7 @@ html {
 
     .image_container .content div p {
         display: block;
+        width: 75%;
     }
 
     .image_container .content div h2 {
@@ -988,6 +987,17 @@ html {
         justify-content: center;
         margin: 0 4rem;
     }
+
+    .image_container .content div h2{
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+
+    .image_container .content div p{
+        font-size: .75rem;
+        width: 75%;
+    }
+    
 
     .swipe-button{
         display: block;
