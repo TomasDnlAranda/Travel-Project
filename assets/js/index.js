@@ -3,6 +3,43 @@ const searchBar    = document.querySelector("#search__bar");
 const mobileMenuButton = document.querySelector("#mobile__menu-button");
 const mobileMenu   = document.querySelector("#mobile__menu");
 const videobtn = document.querySelectorAll('.video-btn');
+const input = document.querySelector('input[type="checkbox"]');
+
+function handleInput() {
+  const { checked } = this;
+  document.querySelector('body').style.background = checked ? '#151d29' : '#ffffff';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(1) > span').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(2) > span').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(3) > span').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(4) > span').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(5) > span').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(6) > span').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(1) > p').style.color = checked ? '#bababa' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(2) > p').style.color = checked ? '#bababa' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(3) > p').style.color = checked ? '#bababa' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(4) > p').style.color = checked ? '#bababa' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(5) > p').style.color = checked ? '#bababa' : '#151d29';
+  document.querySelector('#services > div.service__card-conteiner > div:nth-child(6) > p').style.color = checked ? '#bababa' : '#151d29';
+  document.querySelector('.navbar').style.background = checked ? '#151d29' : '#ffffff';
+  document.querySelector('.navbar__logo').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#search__button').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('body > header > nav > div.navbar__icons > i.fas.fa-user.icon-navbar').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#mobile__menu-button').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('body > header > nav > div.desktop__menu > a:nth-child(1)').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('body > header > nav > div.desktop__menu > a:nth-child(2)').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('body > header > nav > div.desktop__menu > a:nth-child(3)').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('body > header > nav > div.desktop__menu > a:nth-child(4)').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('body > header > nav > div.desktop__menu > a:nth-child(5)').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('body > header > nav > div.desktop__menu > a:nth-child(6)').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('body > header > nav > div.desktop__menu > a:nth-child(7)').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#search__bar').style.background = checked ? '#151d29' : '#ffffff';
+  document.querySelector('#mobile__menu').style.background = checked ? '#151d29' : '#ffffff';
+  document.querySelector('#mobile__menu > div:nth-child(1) > p').style.background = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#review').style.color = checked ? '#ffffff' : '#151d29';
+}
+
+input.addEventListener('input', handleInput);
+
 
 searchButton.addEventListener("click", e => {
     if(searchButton.classList.contains("fa-search")){
