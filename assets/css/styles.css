@@ -163,7 +163,7 @@ html {
 }
 
 .menu__item{
-    background-color: var(--color-menu);
+    background-color: var(--white-);
     border-radius: 0.5rem;
     margin: 1rem;
 }
@@ -230,35 +230,35 @@ label svg {
     width: 50px;
     height: auto;
     display: block;
-  }
+}
 
-  label input + svg .light {
-    transition: opacity 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
-  }
+label input + svg .light {
+   transition: opacity 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
+}
   
-  label input + svg .translate,
-  label input + svg .rotate,
-  label input + svg .background,
-  label input + svg .astronaut,
-  label input + svg .surfer {
-    transition: transform 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
-  }
+label input + svg .translate,
+label input + svg .rotate,
+label input + svg .background,
+label input + svg .astronaut,
+label input + svg .surfer {
+transition: transform 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
+}
 
-  label input:checked + svg .light {
-    opacity: 0;
-  }
+label input:checked + svg .light {
+opacity: 0;
+}
 
-  label input:checked + svg .translate {
-    transform: translateX(0px);
-  }
+label input:checked + svg .translate {
+transform: translateX(0px);
+}
 
-  label input:checked + svg .rotate {
-    transform: rotate(0deg);
-  }
+label input:checked + svg .rotate {
+transform: rotate(0deg);
+}
 
-  label input:checked + svg .background {
-    transform: translate(0px) scale(1);
-  }
+label input:checked + svg .background {
+transform: translate(0px) scale(1);
+}
   
 /* ============= end header area ============= */
 
@@ -289,6 +289,11 @@ label svg {
     text-transform: uppercase;
     text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
 }
+
+.home .content h3 span {
+    font-family: 'Roboto', sans-serif;
+}
+
 
 .home .content p {
     font-size: 1.25rem;
@@ -793,6 +798,10 @@ label svg {
     width: 80%;
     margin-top: .5rem;
     color: var(--color-);
+}
+
+.mySwiper {
+    width: 90%;
 }
 /* ============= end review area ============= */
 

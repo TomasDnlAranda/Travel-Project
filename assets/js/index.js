@@ -34,7 +34,6 @@ function handleInput() {
   document.querySelector('body > header > nav > div.desktop__menu > a:nth-child(7)').style.color = checked ? '#ffffff' : '#151d29';
   document.querySelector('#search__bar').style.background = checked ? '#151d29' : '#ffffff';
   document.querySelector('#mobile__menu').style.background = checked ? '#151d29' : '#ffffff';
-  document.querySelector('#mobile__menu > div:nth-child(1) > p').style.background = checked ? '#ffffff' : '#151d29';
   document.querySelector('#review').style.color = checked ? '#ffffff' : '#151d29';
 }
 
