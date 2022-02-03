@@ -806,6 +806,52 @@ transform: translate(0px) scale(1);
 /* ============= end review area ============= */
 
 
+
+/* ============= start footer area ============= */
+footer {
+    background-image: url(../../images/footer-bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 3rem 0 0 1rem;
+}
+
+.footer__card h4{
+    color: var(--white-);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.footer__card a{
+    text-decoration: none;
+    color: var(--white-);
+    margin: .75rem 0 .75rem 0;
+}
+
+.footer__card a:hover{
+    color: var(--orange-);
+}
+
+.footer__card i{
+    color: var(--orange-);
+    margin: 0 .5rem 0 0;
+}
+/* ============= end footer area ============= */
+
+
+
 /* ============= start breakpoint 640px ============= */
 @media (min-width: 640px) {
     .home .content h3 {
@@ -925,6 +971,14 @@ transform: translate(0px) scale(1);
     
     .swiper-pagination-responsive {
         display: none;
+    }
+
+    footer {
+        justify-content: space-around;
+    }
+
+    .footer__card {
+        width: 22.5%;
     }
     
 }
@@ -1066,6 +1120,10 @@ transform: translate(0px) scale(1);
 
     .swipe-button{
         display: block;
+    }
+
+    .footer__container-card, .footer__container-card-2 {
+        width: 50%;
     }
 }
 /* ============= end breakpoint 1025px ============= */
