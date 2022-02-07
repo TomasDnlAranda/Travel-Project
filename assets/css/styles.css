@@ -805,6 +805,66 @@ transform: translate(0px) scale(1);
 }
 /* ============= end review area ============= */
 
+/*============== start contact area ============= */
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+.contact img{
+    display: none;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+.contact__form{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 95%;
+    margin: 0 auto;
+    
+    
+}
+
+.contact__form-column input{
+    background-color: #FAF7F8;
+    border: none;
+    height: 2.5rem;
+    width: 90%;
+    margin: 1rem 1rem;
+
+}
+
+.contact__form textarea{
+    background-color: #FAF7F8;
+    border: none;
+    height: 10rem;
+    min-width: 90%;
+    margin: 1rem 1rem;
+}
+.contact__form-column input::placeholder {
+    padding-left: 3rem;
+}
+.contact__btn{
+    font-size: 1rem;
+    color: #fff;
+    padding: .5rem 2rem;
+    text-decoration: none;
+    background: var(--orange-);
+    user-select: none;
+    outline: none;
+    border: none;
+    margin: 2rem 1rem;
+    width: 10rem;
+    transition: all .5s;
+    border: 1px solid var(--orange-);
+    cursor: pointer;
+}
+.contact__btn:hover {
+    background-color: #ffa60044;
+    color: #ffa600;
+    border: 1px solid var(--orange-);
+}
+/*============== end contact area ============= */
 
 
 /* ============= start footer area ============= */
@@ -1120,6 +1180,33 @@ footer {
 
     .swipe-button{
         display: block;
+    }
+    .contact{
+        margin-bottom: 2rem;
+    }
+    .contact__container{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 3rem;
+        height: 75vh;
+
+        
+    }
+    .contact__form-row{
+        display: flex;
+    }
+    .contact__form-column{
+        display: flex;
+        flex-direction: column;
+    }
+    .image__form-container{
+        min-width: 50%;
+        max-width: 50%;
+        max-height: 50%;
+    }
+    .contact img{
+        display: block;
+        height: 70vh;
     }
 
     .footer__container-card, .footer__container-card-2 {
