@@ -15,6 +15,7 @@
     --galery-orange-: #ffa600e5;
     --darkMode: #151d29;
     --color-: #8f8f8f;
+    --bg-input-: #FAF7F8;
 
 }
 /* ============= end variable ============= */
@@ -812,13 +813,16 @@ transform: translate(0px) scale(1);
     display: flex;
     flex-direction: column;
 }
+
 .contact img{
     display: none;
 }
+
 .contact{
     display: flex;
     flex-direction: column;
 }
+
 .contact__form{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 95%;
@@ -828,7 +832,7 @@ transform: translate(0px) scale(1);
 }
 
 .contact__form-column input{
-    background-color: #FAF7F8;
+    background-color: var(--bg-input-);
     border: none;
     height: 2.5rem;
     width: 90%;
@@ -837,18 +841,22 @@ transform: translate(0px) scale(1);
 }
 
 .contact__form textarea{
-    background-color: #FAF7F8;
+    background-color: var(--bg-input-);
     border: none;
     height: 10rem;
     min-width: 90%;
     margin: 1rem 1rem;
 }
-.contact__form-column input::placeholder {
-    padding-left: 3rem;
+
+.contact__form-column input::placeholder, textarea::placeholder {
+    padding-left: .5rem;
+    color: var(--gray-light);
+    padding-top: .2rem;
 }
+
 .contact__btn{
     font-size: 1rem;
-    color: #fff;
+    color: var(--white-);
     padding: .5rem 2rem;
     text-decoration: none;
     background: var(--orange-);
@@ -861,9 +869,10 @@ transform: translate(0px) scale(1);
     border: 1px solid var(--orange-);
     cursor: pointer;
 }
+
 .contact__btn:hover {
-    background-color: #ffa60044;
-    color: #ffa600;
+    background-color: var(--orange-hover-);
+    color: var(--orange-);
     border: 1px solid var(--orange-);
 }
 /*============== end contact area ============= */
