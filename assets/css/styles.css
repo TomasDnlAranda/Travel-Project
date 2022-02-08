@@ -365,6 +365,7 @@ transform: translate(0px) scale(1);
     padding: 2.5rem 0;
     width: 100%;
     user-select: none;
+    margin-bottom: 5rem;
 }
 
 .heading span {
@@ -749,6 +750,7 @@ transform: translate(0px) scale(1);
 /* ============= start review area ============= */
 .review {
     margin: 1rem 0;
+    padding-bottom: 5rem;
 }
 
 .review__container-title {
@@ -777,6 +779,7 @@ transform: translate(0px) scale(1);
     user-select: none;
     cursor: pointer;
     background: inherit;
+    height: 22.5rem;
 }
 
 .review__container-img img {
@@ -804,6 +807,7 @@ transform: translate(0px) scale(1);
 .mySwiper {
     width: 90%;
 }
+
 /* ============= end review area ============= */
 
 
