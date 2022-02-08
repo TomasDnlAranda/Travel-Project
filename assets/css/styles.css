@@ -805,6 +805,8 @@ transform: translate(0px) scale(1);
 }
 /* ============= end review area ============= */
 
+
+
 /*============== start contact area ============= */
 .contact{
     display: flex;
@@ -865,6 +867,7 @@ transform: translate(0px) scale(1);
     border: 1px solid var(--orange-);
 }
 /*============== end contact area ============= */
+
 
 
 /* ============= start footer area ============= */
