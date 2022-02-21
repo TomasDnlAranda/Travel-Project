@@ -887,6 +887,11 @@ transform: translate(0px) scale(1);
     color: var(--orange-);
     border: 1px solid var(--orange-);
 }
+#warnings{
+    color: red;
+    margin: 1rem;
+    font-weight: bold;
+}
 /*============== end contact area ============= */
 
 
@@ -1236,5 +1241,6 @@ footer {
     .footer__container-card, .footer__container-card-2 {
         width: 50%;
     }
+
 }
 /* ============= end breakpoint 1025px ============= */
