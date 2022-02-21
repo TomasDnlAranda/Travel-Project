@@ -10,7 +10,9 @@ const contactSubmit = document.querySelector(".contact__btn");
 const name = document.querySelector("#name");
 const phone = document.querySelector("#phone");
 const email = document.querySelector("#email");
+const message = document.querySelector("#message");
 const alerts = document.querySelector("#warnings");
+
 
 contactSubmit.addEventListener('click', e => {
 	e.preventDefault;
@@ -23,12 +25,29 @@ contactSubmit.addEventListener('click', e => {
 		warnings += `The name is not valid <br>`;
 		send = true;
 	}
+	if(name.value.length >= 15){
+		warnings += `The message can not have more than 15 characters <br>`;
+		send = true;
+	}
 	if(!regexEmail.test(email.value)){
 		warnings += `The email is not valid <br>`;
 		send = true;
 	}
+	
 	if(!regexPhone.test(phone.value)){
-		warnings += `The phone is not valid`;
+		warnings += `The phone is not valid <br>`;
+		send = true;
+	}
+	if(phone.value.length >= 15){
+		warnings += `The message can not have more than 15 characters <br>`;
+		send = true;
+	}
+	if(message.value.length <= 0){
+		warnings += `The message can't be empty <br>`;
+		send = true;
+	}
+	if(message.value.length >= 200){
+		warnings += `The message can not have more than 200 characters <br>`;
 		send = true;
 	}
 	if(send){
@@ -69,6 +88,7 @@ function handleInput() {
   document.querySelector('#search__bar').style.background = checked ? '#151d29' : '#ffffff';
   document.querySelector('#mobile__menu').style.background = checked ? '#151d29' : '#ffffff';
   document.querySelector('#review').style.color = checked ? '#ffffff' : '#151d29';
+  document.querySelector('#name').style.backgound = checked ? '#ffffff' : '#303843';
 }
 
 input.addEventListener('input', handleInput);
@@ -120,7 +140,7 @@ var swiper = new Swiper('.swiper-container', {
 	// init: false,
 	pagination: {
 	  el: '.swiper-pagination',
-	  clickable: true,
+	  clickable: true, 
 	},
 
   
