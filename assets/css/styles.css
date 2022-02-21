@@ -14,9 +14,10 @@
     --color-menu: #202320;
     --galery-orange-: #ffa600e5;
     --darkMode: #151d29;
+    --bg-form-darkMode: #1e293a;
     --color-: #8f8f8f;
     --bg-input-: #FAF7F8;
-    --bg-form-: #ebe2e2;
+    --bg-form-: #f8f8f8;
 
 }
 /* ============= end variable ============= */
@@ -407,8 +408,9 @@ transform: translate(0px) scale(1);
     justify-content: center;
     display: flex;
     flex-direction: column;
+    margin: 0 2rem;
     width: 100%;
-    background-color: rgb(235, 226, 226);
+    background-color: var(--bg-form-);
 }
 
 .book .row form .inputBox input {
@@ -416,7 +418,7 @@ transform: translate(0px) scale(1);
     padding: .5rem;
     border: none;
     font-size: .75rem !important;
-    color: var(--color-);
+    color: var(--darkMode) !important;
     background: var(--white-);
     backdrop-filter: blur(5px);
     border-radius: 1rem;
@@ -425,11 +427,11 @@ transform: translate(0px) scale(1);
 }
 
 .book .row form .inputBox {
-    font-size: .75rem !important;
+    font-size: .5rem !important;
 }
 
 .book .row form .inputBox input::placeholder {
-    color: var(--color-);
+    color: var(--darkMode);
 }
 
 .book .row form .inputBox input:focus {
@@ -438,7 +440,7 @@ transform: translate(0px) scale(1);
 }
 
 .book .row form .btn {
-    font-size: 1rem;
+    font-size: 1rem !important;
     color: var(--white-);
     padding: .5rem 2rem;
     text-decoration: none;
@@ -447,7 +449,7 @@ transform: translate(0px) scale(1);
     outline: none;
     border: none;
     margin-top: 2rem;
-    width: 10rem;
+    width: 9rem !important;
     transition: all .5s;
     border: 1px solid var(--orange-);
     cursor: pointer;
@@ -1233,12 +1235,6 @@ footer {
 
     .footer__container-card, .footer__container-card-2 {
         width: 50%;
-    }
-    .alert__form{
-        color: red;
-        line-height: -1;
-        margin-left: 1rem;
-
     }
 }
 /* ============= end breakpoint 1025px ============= */

@@ -55,6 +55,7 @@ function handleInput() {
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(5) > p').style.color = checked ? '#bababa' : '#151d29';
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(6) > p').style.color = checked ? '#bababa' : '#151d29';
   document.querySelector('.navbar').style.background = checked ? '#151d29' : '#ffffff';
+  document.querySelector("#book > div > form").style.background = checked ? '#1e293a' : '#ffffff';
   document.querySelector('.navbar__logo').style.color = checked ? '#ffffff' : '#151d29';
   document.querySelector('#search__button').style.color = checked ? '#ffffff' : '#151d29';
   document.querySelector('body > header > nav > div.navbar__icons > i.fas.fa-user.icon-navbar').style.color = checked ? '#ffffff' : '#151d29';
