@@ -12,7 +12,7 @@ const phone = document.querySelector("#phone");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 const alerts = document.querySelector("#warnings");
-const submitMain = document.getElementById('submitMain')
+const formPackages = document.getElementById('form-packages')
 const whereTo = document.getElementById('whereTo')
 const msgErrorWhereTo = document.getElementById('msgErrorWhereTo');
 const howMany = document.getElementById('howMany')
@@ -23,8 +23,7 @@ const leaving = document.getElementById('leaving')
 const msgErrorLeaving = document.getElementById('msgErrorLeaving');
 
 const validarForm = (e) => {
-	// e.preventDefault();
-
+	
 	const regExpOnlyLetters = /^[a-zA-Z ]*$/;
 	const numberHowMany = parseInt(howMany.value)
 
@@ -77,7 +76,7 @@ const validarForm = (e) => {
 	}
 }
 
-submitMain.addEventListener('click', (e) => validarForm(e))
+formPackages.addEventListener('submit', (e) => validarForm(e))
 
 
 contactSubmit.addEventListener('click', e => {
