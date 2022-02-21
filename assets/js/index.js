@@ -65,11 +65,11 @@ const validarForm = (e) => {
 		msgErrorArrivals.textContent = "Good!"
 	}
 
-	if (leaving.value.length <= 0) {
+	if (leaving.value.length <= 0 || leaving.value <= arrivals.value) {
 		msgErrorLeaving.style.display = "block"
 		leaving.style.border = "1px solid #ec0000"
 		msgErrorLeaving.style.color = "#ec0000"
-		msgErrorLeaving.textContent = "enter the leaving date please"
+		msgErrorLeaving.textContent = "enter the leaving date please, it can't be before leaving"
 	} else {
 		leaving.style.border = "1px solid #017c01"
 		msgErrorLeaving.style.display = "block"
