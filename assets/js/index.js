@@ -7,10 +7,76 @@ const input = document.querySelector('input[type="checkbox"]');
 
 
 const contactSubmit = document.querySelector(".contact__btn");
-const name = document.querySelector("#name");
+const namee = document.querySelector("#name");
 const phone = document.querySelector("#phone");
 const email = document.querySelector("#email");
 const alerts = document.querySelector("#warnings");
+const submitMain = document.getElementById('submitMain')
+const whereTo = document.getElementById('whereTo')
+const msgErrorWhereTo = document.getElementById('msgErrorWhereTo');
+const howMany = document.getElementById('howMany')
+const msgErrorhowMany = document.getElementById('msgErrorHowMany');
+const arrivals = document.getElementById('arrivals')
+const msgErrorArrivals = document.getElementById('msgErrorArrivals');
+const leaving = document.getElementById('leaving')
+const msgErrorLeaving = document.getElementById('msgErrorLeaving');
+
+const validarForm = (e) => {
+	// e.preventDefault();
+
+	const regExpOnlyLetters = /^[a-zA-Z ]*$/;
+	const numberHowMany = parseInt(howMany.value)
+
+	if (!regExpOnlyLetters.test(whereTo.value) || !whereTo.value.trim()) {
+		msgErrorWhereTo.style.display = "block"
+		whereTo.style.border = "1px solid #ec0000"
+		msgErrorWhereTo.style.color = "#ec0000"
+		msgErrorWhereTo.textContent = "invalid data, only letters"
+	} else {
+		whereTo.style.border = "1px solid #017c01"
+		msgErrorWhereTo.style.display = "block"
+		msgErrorWhereTo.style.color = "#017c01"
+		msgErrorWhereTo.textContent = "Good!"
+	}
+
+	if (numberHowMany >= 10 || numberHowMany <= 0) {
+		msgErrorhowMany.style.display = "block"
+		howMany.style.border = "1px solid #ec0000"
+		msgErrorhowMany.style.color = "#ec0000"
+		msgErrorhowMany.textContent = "only minimum 1 people, maximum 10"
+	} else {
+		howMany.style.border = "1px solid #017c01"
+		msgErrorhowMany.style.display = "block"
+		msgErrorhowMany.style.color = "#017c01"
+		msgErrorhowMany.textContent = "Good!"
+	}
+
+	if (arrivals.value.length <= 0) {
+		msgErrorArrivals.style.display = "block"
+		arrivals.style.border = "1px solid #ec0000"
+		msgErrorArrivals.style.color = "#ec0000"
+		msgErrorArrivals.textContent = "enter the arrival date please"
+	} else {
+		arrivals.style.border = "1px solid #017c01"
+		msgErrorArrivals.style.display = "block"
+		msgErrorArrivals.style.color = "#017c01"
+		msgErrorArrivals.textContent = "Good!"
+	}
+
+	if (leaving.value.length <= 0) {
+		msgErrorLeaving.style.display = "block"
+		leaving.style.border = "1px solid #ec0000"
+		msgErrorLeaving.style.color = "#ec0000"
+		msgErrorLeaving.textContent = "enter the leaving date please"
+	} else {
+		leaving.style.border = "1px solid #017c01"
+		msgErrorLeaving.style.display = "block"
+		msgErrorLeaving.style.color = "#017c01"
+		msgErrorLeaving.textContent = "Good!"
+	}
+}
+
+submitMain.addEventListener('click', (e) => validarForm(e))
 
 contactSubmit.addEventListener('click', e => {
 	e.preventDefault;
@@ -19,7 +85,7 @@ contactSubmit.addEventListener('click', e => {
 	let regexPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 	let send = false;
 	alerts.innerHTML = " ";
-	if(name.value.length < 6){
+	if(namee.value.length < 6){
 		warnings += `The name is not valid <br>`;
 		send = true;
 	}
@@ -55,7 +121,7 @@ function handleInput() {
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(5) > p').style.color = checked ? '#bababa' : '#151d29';
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(6) > p').style.color = checked ? '#bababa' : '#151d29';
   document.querySelector('.navbar').style.background = checked ? '#151d29' : '#ffffff';
-  document.querySelector("#book > div > form").style.background = checked ? '#1e293a' : '#ffffff';
+  document.querySelector("#book > div > form").style.background = checked ? '#1e293a' : '#f8f8f8';
   document.querySelector('.navbar__logo').style.color = checked ? '#ffffff' : '#151d29';
   document.querySelector('#search__button').style.color = checked ? '#ffffff' : '#151d29';
   document.querySelector('body > header > nav > div.navbar__icons > i.fas.fa-user.icon-navbar').style.color = checked ? '#ffffff' : '#151d29';

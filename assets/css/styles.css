@@ -413,7 +413,7 @@ transform: translate(0px) scale(1);
     background-color: var(--bg-form-);
 }
 
-.book .row form .inputBox input {
+.book .row form .inputBox .input-main {
     width: 90%;
     padding: .5rem;
     border: none;
@@ -424,10 +424,18 @@ transform: translate(0px) scale(1);
     border-radius: 1rem;
     text-transform: none;
     outline: none;
+    border: 1px solid var(--white-);
 }
 
 .book .row form .inputBox {
     font-size: .5rem !important;
+}
+
+
+.book .row form .inputBox p {
+    font-size: .75rem;
+    margin: .25rem .50rem;
+    display: none;
 }
 
 .book .row form .inputBox input::placeholder {
