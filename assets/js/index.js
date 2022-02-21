@@ -12,7 +12,7 @@ const phone = document.querySelector("#phone");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 const alerts = document.querySelector("#warnings");
-const formPackages = document.getElementById('form-packages')
+const submitMain = document.getElementById('submitMain')
 const whereTo = document.getElementById('whereTo')
 const msgErrorWhereTo = document.getElementById('msgErrorWhereTo');
 const howMany = document.getElementById('howMany')
@@ -22,8 +22,9 @@ const msgErrorArrivals = document.getElementById('msgErrorArrivals');
 const leaving = document.getElementById('leaving')
 const msgErrorLeaving = document.getElementById('msgErrorLeaving');
 
+
 const validarForm = (e) => {
-	
+
 	const regExpOnlyLetters = /^[a-zA-Z ]*$/;
 	const numberHowMany = parseInt(howMany.value)
 
@@ -39,7 +40,8 @@ const validarForm = (e) => {
 		msgErrorWhereTo.textContent = "Good!"
 	}
 
-	if (numberHowMany >= 10 || numberHowMany <= 0) {
+
+	if (numberHowMany >= 11 || numberHowMany <= 0 || howMany.value.length == 0) {
 		msgErrorhowMany.style.display = "block"
 		howMany.style.border = "1px solid #ec0000"
 		msgErrorhowMany.style.color = "#ec0000"
@@ -76,7 +78,7 @@ const validarForm = (e) => {
 	}
 }
 
-formPackages.addEventListener('submit', (e) => validarForm(e))
+submitMain.addEventListener('click', (e) => validarForm(e))
 
 
 contactSubmit.addEventListener('click', e => {
