@@ -16,6 +16,7 @@
     --darkMode: #151d29;
     --color-: #8f8f8f;
     --bg-input-: #FAF7F8;
+    --bg-form-: #ebe2e2;
 
 }
 /* ============= end variable ============= */
@@ -407,19 +408,24 @@ transform: translate(0px) scale(1);
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: rgb(235, 226, 226);
 }
 
 .book .row form .inputBox input {
     width: 90%;
     padding: .5rem;
     border: none;
-    font-size: .8rem;
+    font-size: .75rem !important;
     color: var(--color-);
-    background: var(--darkMode);
+    background: var(--white-);
     backdrop-filter: blur(5px);
     border-radius: 1rem;
     text-transform: none;
     outline: none;
+}
+
+.book .row form .inputBox {
+    font-size: .75rem !important;
 }
 
 .book .row form .inputBox input::placeholder {
@@ -455,7 +461,7 @@ transform: translate(0px) scale(1);
 }
 
 .book .row form .inputBox h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem !important;
     padding: 1rem 0;
     color: var(--orange-);
 }
