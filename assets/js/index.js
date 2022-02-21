@@ -5,6 +5,40 @@ const mobileMenu   = document.querySelector("#mobile__menu");
 const videobtn = document.querySelectorAll('.video-btn');
 const input = document.querySelector('input[type="checkbox"]');
 
+
+const contactSubmit = document.querySelector(".contact__btn");
+const name = document.querySelector("#name");
+const phone = document.querySelector("#phone");
+const email = document.querySelector("#email");
+const alerts = document.querySelector("#warnings");
+
+contactSubmit.addEventListener('click', e => {
+	e.preventDefault;
+	let warnings = "";
+	let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	let regexPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+	let send = false;
+	alerts.innerHTML = " ";
+	if(name.value.length < 6){
+		warnings += `The name is not valid <br>`;
+		send = true;
+	}
+	if(!regexEmail.test(email.value)){
+		warnings += `The email is not valid <br>`;
+		send = true;
+	}
+	if(!regexPhone.test(phone.value)){
+		warnings += `The phone is not valid`;
+		send = true;
+	}
+	if(send){
+		alerts.innerHTML = warnings;
+	}
+
+});
+
+
+
 function handleInput() {
   const { checked } = this;
   document.querySelector('body').style.background = checked ? '#151d29' : '#ffffff';
@@ -64,6 +98,7 @@ mobileMenuButton.addEventListener("click", e => {
     mobileMenuButton.classList.toggle("fa-times");
     mobileMenuButton.classList.toggle("fa-bars");
 });
+
 
 videobtn.forEach(btn =>{
     btn.addEventListener('click', ()=>{
@@ -140,4 +175,6 @@ $(document).ready(function(){
 		y = e.pageY - $(this).offset().top;
 		$(this).find('span').css({top:y, left:x})
 	})
-})
+});
+
+

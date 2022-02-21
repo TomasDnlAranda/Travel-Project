@@ -1228,5 +1228,11 @@ footer {
     .footer__container-card, .footer__container-card-2 {
         width: 50%;
     }
+    .alert__form{
+        color: red;
+        line-height: -1;
+        margin-left: 1rem;
+
+    }
 }
 /* ============= end breakpoint 1025px ============= */
