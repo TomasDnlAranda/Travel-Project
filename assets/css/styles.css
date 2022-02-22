@@ -14,7 +14,10 @@
     --color-menu: #202320;
     --galery-orange-: #ffa600e5;
     --darkMode: #151d29;
+    --bg-form-darkMode: #1e293a;
     --color-: #8f8f8f;
+    --bg-input-: #eeeeee;
+    --bg-form-: #f0f0f0;
 
 }
 /* ============= end variable ============= */
@@ -79,8 +82,9 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
-    position: relative;
+    position: fixed;
     z-index: 50;
+    width: 100%;
 }
 
 .navbar__logo{
@@ -107,8 +111,10 @@ html {
     min-height: 3.5rem;
     max-width: 100%;
     min-width: 100%;
+    margin-top: .50rem;
     display: flex;
     align-items: center;
+    position: fixed;
     gap: 1rem;
     border-top: 1px solid var(--gray-);
     top: -3.5rem;
@@ -125,6 +131,7 @@ html {
     border-radius: 0.5rem;
     border: 0;
     margin-left: 1rem;
+    padding-left: .50rem;
 }
 
 .search__bar .fas{
@@ -138,6 +145,7 @@ html {
 	-webkit-transform: translate(0, 7rem);
 	-o-transform: translate(0, 7rem); 
 	-moz-transform: translate(0, 7rem);
+    position: fixed;
 }
 
 .move-up {
@@ -145,12 +153,13 @@ html {
 	-webkit-transform: translate(0, 3.5);
 	-o-transform: translate(0, 3.5rem); 
 	-moz-transform: translate(0, 3.5rem);
+    position: fixed;
 }
 
 .menu{
     position: absolute;
-    background-color: var(--darkMode);
-    border-top: 1px solid var(--gray-);
+    position: fixed;
+    background-color: var(--white-);
     min-height: 25rem;
     max-height: 25rem;
     padding: 1rem 0;
@@ -160,6 +169,7 @@ html {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
+    margin-top: 4rem;
 }
 
 .menu__item{
@@ -229,6 +239,8 @@ label input {
 label svg {
     width: 50px;
     height: auto;
+    margin-right: 1.75rem;
+    cursor: pointer;
     display: block;
 }
 
@@ -361,6 +373,7 @@ transform: translate(0px) scale(1);
 
 .heading {
     text-align: center;
+    margin-bottom: 5rem;
     padding: 2.5rem 0;
     width: 100%;
     user-select: none;
@@ -403,25 +416,41 @@ transform: translate(0px) scale(1);
     border-radius: .5rem;
     justify-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    margin: 0 2rem;
     width: 100%;
+    background-color: var(--bg-form-);
 }
 
-.book .row form .inputBox input {
+.book .row form .inputBox .input-main {
     width: 90%;
     padding: .5rem;
     border: none;
-    font-size: .8rem;
-    color: var(--color-);
-    background: var(--darkMode);
+    font-size: .75rem !important;
+    color: var(--darkMode) !important;
+    background: var(--white-);
     backdrop-filter: blur(5px);
     border-radius: 1rem;
-    text-transform: none;
+    text-transform: none;border: 1px solid var(--white-);
+}
+
+.book .row form .inputBox .input-main:focus {
     outline: none;
 }
 
+.book .row form .inputBox {
+    font-size: .5rem !important;
+}
+
+
+.book .row form .inputBox p {
+    font-size: .75rem;
+    margin: .25rem .50rem;
+    display: none;
+}
+
 .book .row form .inputBox input::placeholder {
-    color: var(--color-);
+    color: var(--darkMode);
 }
 
 .book .row form .inputBox input:focus {
@@ -430,7 +459,7 @@ transform: translate(0px) scale(1);
 }
 
 .book .row form .btn {
-    font-size: 1rem;
+    font-size: 1rem !important;
     color: var(--white-);
     padding: .5rem 2rem;
     text-decoration: none;
@@ -439,7 +468,7 @@ transform: translate(0px) scale(1);
     outline: none;
     border: none;
     margin-top: 2rem;
-    width: 10rem;
+    width: 9rem !important;
     transition: all .5s;
     border: 1px solid var(--orange-);
     cursor: pointer;
@@ -453,7 +482,7 @@ transform: translate(0px) scale(1);
 }
 
 .book .row form .inputBox h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem !important;
     padding: 1rem 0;
     color: var(--orange-);
 }

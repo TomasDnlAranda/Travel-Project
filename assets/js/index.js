@@ -4,8 +4,6 @@ const mobileMenuButton = document.querySelector("#mobile__menu-button");
 const mobileMenu   = document.querySelector("#mobile__menu");
 const videobtn = document.querySelectorAll('.video-btn');
 const input = document.querySelector('input[type="checkbox"]');
-
-
 const contactSubmit = document.querySelector(".contact__btn");
 const sendContact = document.querySelector(".send__contact");
 const namee = document.querySelector("#name");
@@ -25,6 +23,20 @@ const arrivals = document.getElementById('arrivals');
 const msgErrorArrivals = document.getElementById('msgErrorArrivals');
 const leaving = document.getElementById('leaving');
 const msgErrorLeaving = document.getElementById('msgErrorLeaving');
+const textMenuMobile = document.querySelectorAll('.menu__item-text')
+const bgMenuMobile = document.querySelectorAll('.menu__item')
+
+console.log(textMenuMobile)
+
+mobileMenuButton.addEventListener("click", (e) => {
+	textMenuMobile.forEach( item => {
+		item.style.color = "#ffffff"
+	})
+
+	bgMenuMobile.forEach( item => {
+		item.style.backgroundColor = "#151d29"
+	})
+})
 
 
 const validarForm = (e) => {
@@ -199,6 +211,9 @@ mobileMenuButton.addEventListener("click", e => {
     if(mobileMenuButton.classList.contains("fa-times")){
         mobileMenu.classList.remove("move__down-menu");
         mobileMenu.classList.add("move__up-menu");
+		textMenuMobile.forEach( item => {
+			item.style.color = "#151d29"
+		})
     }
     mobileMenuButton.classList.toggle("fa-times");
     mobileMenuButton.classList.toggle("fa-bars");
