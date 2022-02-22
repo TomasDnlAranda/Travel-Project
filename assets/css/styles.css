@@ -173,13 +173,21 @@ html {
 }
 
 .menu__item{
-    background-color: var(--white-);
+    background-color: var(--darkMode);
     border-radius: 0.5rem;
     margin: 1rem;
 }
 
 .menu__item-text{
     color: var(--darkMode);
+    padding: 0.5rem 0;
+    margin-left: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu__item-mobile-text {
+    color: var(--white-);
     padding: 0.5rem 0;
     margin-left: 1rem;
     cursor: pointer;
@@ -275,9 +283,22 @@ transform: translate(0px) scale(1);
 /* ============= end header area ============= */
 
 
+#login {
+    position: absolute;
+    top: 20rem;
+    left: 20rem;
+    z-index: 100;
+}
+
+#login form {
+    padding: 1rem;
+    background: var(--white-);
+    margin: 0 auto;
+}
+
+
 
 /* ============= start home area ============= */
-
 #book {
     padding-top: 4rem;
 }

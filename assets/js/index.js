@@ -23,21 +23,7 @@ const arrivals = document.getElementById('arrivals');
 const msgErrorArrivals = document.getElementById('msgErrorArrivals');
 const leaving = document.getElementById('leaving');
 const msgErrorLeaving = document.getElementById('msgErrorLeaving');
-const textMenuMobile = document.querySelectorAll('.menu__item-text')
-const bgMenuMobile = document.querySelectorAll('.menu__item')
-
-console.log(textMenuMobile)
-
-mobileMenuButton.addEventListener("click", (e) => {
-	textMenuMobile.forEach( item => {
-		item.style.color = "#ffffff"
-	})
-
-	bgMenuMobile.forEach( item => {
-		item.style.backgroundColor = "#151d29"
-	})
-})
-
+const textMenuMobile = document.querySelectorAll('.menu__item-mobile-text');
 
 const validarForm = (e) => {
 
@@ -161,6 +147,10 @@ function handleInput() {
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(4) > p').style.color = checked ? '#bababa' : '#151d29';
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(5) > p').style.color = checked ? '#bababa' : '#151d29';
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(6) > p').style.color = checked ? '#bababa' : '#151d29';
+  const bgMenuMobile = document.querySelectorAll('.menu__item')
+  bgMenuMobile.forEach (item => {
+	  item.style.background = checked ? '#ffffff' : '#151d29';
+  })
   const menuMobileDiv = document.querySelectorAll("#mobile__menu > div")
   menuMobileDiv.forEach (item => {
 	  item.style.background = checked ? '#ffffff' : '#151d29';
@@ -211,9 +201,6 @@ mobileMenuButton.addEventListener("click", e => {
     if(mobileMenuButton.classList.contains("fa-times")){
         mobileMenu.classList.remove("move__down-menu");
         mobileMenu.classList.add("move__up-menu");
-		textMenuMobile.forEach( item => {
-			item.style.color = "#151d29"
-		})
     }
     mobileMenuButton.classList.toggle("fa-times");
     mobileMenuButton.classList.toggle("fa-bars");
