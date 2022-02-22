@@ -625,25 +625,34 @@
             <div class="image__form-container">
                 <img src="/images/contact-img.svg" alt="book-svg">
             </div>
+            <form class="send__contact" action="">
             <div class="contact__form">
                 <div class="contact__form-row">
                     <div class="contact__form-column">
-                        <form action="">
-                            <input type="text" placeholder="Name" id="name">
-                            <input type="tel" placeholder="Phone" id="phone">                           
-                        </form>
+                        <div class="contact__input-box">
+                            <input type="text" placeholder="Name" id="name" required>
+                            <p id="warnName"></p>
+                        </div>
+                        <div class="contact__input-box">
+                            <input type="tel" placeholder="Phone" id="phone" required>
+                            <p id="warnPhone"></p>
+                        </div>                                                                                               
                     </div>
                     <div class="contact__form-column">
-                        <form action="">
-                            <input type="email" placeholder="Email" id="email">
-                        </form>
+                        <div class="contact__input-box">
+                            <input type="email" placeholder="Email" id="email" required>
+                            <p id="warnEmail"></p>
+                        </div>                       
                     </div>
                 </div>
-                <textarea type="text" placeholder="Message" rows="10"></textarea>
+                <div class="contact__input-box">
+                    <textarea type="text" placeholder="Message" rows="10" id="message" required></textarea>
+                    <p id="warnMessage"></p>
+                </div>
                 <input type="submit" class="contact__btn">
-                <p id="warnings"> </p>
             </div>
-            
+            </form>
+        </div>            
         </div>
     </section>
     <!-- ============================ end section contact area ============================ -->
