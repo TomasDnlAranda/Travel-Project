@@ -277,6 +277,11 @@ transform: translate(0px) scale(1);
 
 
 /* ============= start home area ============= */
+
+#book {
+    padding-top: 4rem;
+}
+
 .home {
     display: flex;
     justify-content: center;
@@ -511,6 +516,10 @@ transform: translate(0px) scale(1);
 
 
 /* ============= start packages area ============= */
+#packages {
+    padding-top: 4rem;
+}
+
 .swipe-button{
     align-self: center;
     font-size: 3rem;
@@ -620,6 +629,10 @@ transform: translate(0px) scale(1);
     padding: 2rem 0 0 0;
 }
 
+#services {
+    padding-top: 6rem;
+}
+
 .swiper-wrapper {
     margin-bottom: 2rem;
 }
@@ -692,6 +705,10 @@ transform: translate(0px) scale(1);
 .gallery{
     display: grid;
     gap: 1rem;
+}
+
+#gallery {
+    padding-top: 6rem;
 }
 
 .image_container{
@@ -776,7 +793,8 @@ transform: translate(0px) scale(1);
 
 /* ============= start review area ============= */
 .review {
-    margin: 1rem 0;
+    margin: 1rem;
+    padding-top: 2.5rem;
 }
 
 .review__container-title {
@@ -838,6 +856,7 @@ transform: translate(0px) scale(1);
 .contact{
     display: flex;
     flex-direction: column;
+    padding-top: 2.5rem;
 }
 .contact img{
     display: none;
