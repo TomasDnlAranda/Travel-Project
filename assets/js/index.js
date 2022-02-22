@@ -7,19 +7,23 @@ const input = document.querySelector('input[type="checkbox"]');
 
 
 const contactSubmit = document.querySelector(".contact__btn");
+const sendContact = document.querySelector(".send__contact");
 const namee = document.querySelector("#name");
 const phone = document.querySelector("#phone");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
-const alerts = document.querySelector("#warnings");
-const submitMain = document.getElementById('submitMain')
-const whereTo = document.getElementById('whereTo')
+const warnName = document.querySelector("#warnName");
+const warnPhone = document.querySelector("#warnPhone");
+const warnEmail = document.querySelector("#warnEmail");
+const warnMessage = document.querySelector("#warnMessage");
+const submitMain = document.getElementById('submitMain');
+const whereTo = document.getElementById('whereTo');
 const msgErrorWhereTo = document.getElementById('msgErrorWhereTo');
-const howMany = document.getElementById('howMany')
+const howMany = document.getElementById('howMany');
 const msgErrorhowMany = document.getElementById('msgErrorHowMany');
-const arrivals = document.getElementById('arrivals')
+const arrivals = document.getElementById('arrivals');
 const msgErrorArrivals = document.getElementById('msgErrorArrivals');
-const leaving = document.getElementById('leaving')
+const leaving = document.getElementById('leaving');
 const msgErrorLeaving = document.getElementById('msgErrorLeaving');
 
 
@@ -82,47 +86,52 @@ submitMain.addEventListener('click', (e) => validarForm(e))
 
 
 contactSubmit.addEventListener('click', e => {
-	e.preventDefault;
-	let warnings = "";
-	let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-	let regexPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
-	let send = false;
-	alerts.innerHTML = " ";
-	if(namee.value.length < 6){
-		warnings += `The name is not valid <br>`;
-		send = true;
-	}
-	if(name.value.length >= 15){
-		warnings += `The message can not have more than 15 characters <br>`;
-		send = true;
-	}
-	if(!regexEmail.test(email.value)){
-		warnings += `The email is not valid <br>`;
-		send = true;
-	}
-	
-	if(!regexPhone.test(phone.value)){
-		warnings += `The phone is not valid <br>`;
-		send = true;
-	}
-	if(phone.value.length >= 15){
-		warnings += `The message can not have more than 15 characters <br>`;
-		send = true;
-	}
-	if(message.value.length <= 0){
-		warnings += `The message can't be empty <br>`;
-		send = true;
-	}
-	if(message.value.length >= 200){
-		warnings += `The message can not have more than 200 characters <br>`;
-		send = true;
-	}
-	if(send){
-		alerts.innerHTML = warnings;
-	}
-
+	console.log('submit');
+	contactValidation(e);
 });
 
+const contactValidation = (e) => {
+	e.preventDefault();
+	const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	const regexPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+	const regExpOnlyLetters = /^[a-zA-Z ]*$/;
+	if(namee.value.length < 3 || !regExpOnlyLetters.test(namee.value)){
+		warnName.classList.add("contactWarn");
+		warnName.textContent = "Please enter a valid name";
+		
+	}else{
+		warnName.textContent = "Good!";
+		warnName.classList.remove("contactWarn");
+		warnName.classList.add("contactSuccess");
+	}
+	if(!regexPhone.test(phone.value)){
+		warnPhone.textContent = "Please enter a valid number";
+		warnPhone.classList.add("contactWarn");
+	}else{
+		warnPhone.textContent = "Good!";
+		warnPhone.classList.remove("contactWarn");
+		warnPhone.classList.add("contactSuccess");
+	}
+	if(!regexEmail.test(email.value)){
+		warnEmail.textContent = "Please enter a valid mail";
+		warnEmail.classList.add("contactWarn");
+	}else{
+		warnEmail.textContent = "Good!";
+		warnEmail.classList.remove("contactWarn");
+		warnEmail.classList.add("contactSuccess");
+	}
+	if(message.value.length < 10 || message.value.length > 300){
+		warnMessage.textContent = "The message can contain between 10 and 200 characters";
+		warnMessage.classList.add("contactWarn");
+	}else{
+		warnMessage.textContent = "Good!";
+		warnMessage.classList.remove("contactWarn");
+		warnMessage.classList.add("contactSuccess");
+
+	}
+
+	
+}
 
 
 function handleInput() {
