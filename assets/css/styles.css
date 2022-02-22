@@ -82,8 +82,9 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
-    position: relative;
+    position: fixed;
     z-index: 50;
+    width: 100%;
 }
 
 .navbar__logo{
@@ -111,6 +112,7 @@ html {
     max-width: 100%;
     min-width: 100%;
     display: flex;
+    position: fixed;
     align-items: center;
     gap: 1rem;
     border-top: 1px solid var(--gray-);
@@ -141,6 +143,7 @@ html {
 	-webkit-transform: translate(0, 7rem);
 	-o-transform: translate(0, 7rem); 
 	-moz-transform: translate(0, 7rem);
+    position: fixed;
 }
 
 .move-up {
@@ -148,10 +151,11 @@ html {
 	-webkit-transform: translate(0, 3.5);
 	-o-transform: translate(0, 3.5rem); 
 	-moz-transform: translate(0, 3.5rem);
+    position: fixed;
 }
 
 .menu{
-    position: absolute;
+    position: fixed;
     background-color: var(--darkMode);
     border-top: 1px solid var(--gray-);
     min-height: 25rem;
@@ -163,6 +167,7 @@ html {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
+    margin-top: 4rem;
 }
 
 .menu__item{
@@ -231,6 +236,8 @@ label input {
 
 label svg {
     width: 50px;
+    margin-right: 1.75rem;
+    cursor: pointer;
     height: auto;
     display: block;
 }

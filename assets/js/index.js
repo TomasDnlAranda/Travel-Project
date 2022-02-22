@@ -140,6 +140,14 @@ function handleInput() {
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(4) > p').style.color = checked ? '#bababa' : '#151d29';
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(5) > p').style.color = checked ? '#bababa' : '#151d29';
   document.querySelector('#services > div.service__card-conteiner > div:nth-child(6) > p').style.color = checked ? '#bababa' : '#151d29';
+  const menuMobileDiv = document.querySelectorAll("#mobile__menu > div")
+  menuMobileDiv.forEach (item => {
+	  item.style.background = checked ? '#ffffff' : '#151d29';
+  })
+  const menuMobileP = document.querySelectorAll("#mobile__menu > div > p")
+  menuMobileP.forEach (item => {
+	  item.style.color = checked ? '#151d29' : '#ffffff';
+  })
   document.querySelector('.navbar').style.background = checked ? '#151d29' : '#ffffff';
   document.querySelector("#book > div > form").style.background = checked ? '#1e293a' : '#f8f8f8';
   document.querySelector('.navbar__logo').style.color = checked ? '#ffffff' : '#151d29';
