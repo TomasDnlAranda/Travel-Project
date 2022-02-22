@@ -149,7 +149,7 @@ function handleInput() {
 	  item.style.color = checked ? '#151d29' : '#ffffff';
   })
   document.querySelector('.navbar').style.background = checked ? '#151d29' : '#ffffff';
-  document.querySelector("#book > div > form").style.background = checked ? '#1e293a' : '#f8f8f8';
+  document.querySelector("#book > div > form").style.background = checked ? '#1e293a' : '#f0f0f0';
   document.querySelector('.navbar__logo').style.color = checked ? '#ffffff' : '#151d29';
   document.querySelector('#search__button').style.color = checked ? '#ffffff' : '#151d29';
   document.querySelector('body > header > nav > div.navbar__icons > i.fas.fa-user.icon-navbar').style.color = checked ? '#ffffff' : '#151d29';

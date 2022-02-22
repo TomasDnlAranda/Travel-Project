@@ -16,8 +16,8 @@
     --darkMode: #151d29;
     --bg-form-darkMode: #1e293a;
     --color-: #8f8f8f;
-    --bg-input-: #FAF7F8;
-    --bg-form-: #f8f8f8;
+    --bg-input-: #eeeeee;
+    --bg-form-: #f0f0f0;
 
 }
 /* ============= end variable ============= */
@@ -156,7 +156,7 @@ html {
 
 .menu{
     position: fixed;
-    background-color: var(--darkMode);
+    background-color: var(--white-);
     border-top: 1px solid var(--gray-);
     min-height: 25rem;
     max-height: 25rem;
@@ -171,7 +171,7 @@ html {
 }
 
 .menu__item{
-    background-color: var(--white-);
+    background-color: var(--darkMode);
     border-radius: 0.5rem;
     margin: 1rem;
 }
