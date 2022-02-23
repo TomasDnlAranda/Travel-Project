@@ -90,10 +90,12 @@ contactSubmit.addEventListener('click', e => {
 
 const contactValidation = (e) => {
 	e.preventDefault();
+
 	const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	const regexPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 	const regExpOnlyLetters = /^[a-zA-Z ]*$/;
 	if(namee.value.length < 3 || !regExpOnlyLetters.test(namee.value)){
+		warnName.classList.remove("contactSuccess");
 		warnName.classList.add("contactWarn");
 		warnName.textContent = "Please enter a valid name";
 		
@@ -102,8 +104,9 @@ const contactValidation = (e) => {
 		warnName.classList.remove("contactWarn");
 		warnName.classList.add("contactSuccess");
 	}
-	if(!regexPhone.test(phone.value)){
+	if(!regexPhone.test(phone.value)){		
 		warnPhone.textContent = "Please enter a valid number";
+		warnPhone.classList.remove("contactSuccess");
 		warnPhone.classList.add("contactWarn");
 	}else{
 		warnPhone.textContent = "Good!";
@@ -112,14 +115,16 @@ const contactValidation = (e) => {
 	}
 	if(!regexEmail.test(email.value)){
 		warnEmail.textContent = "Please enter a valid mail";
+		warnEmail.classList.remove("contactSuccess");
 		warnEmail.classList.add("contactWarn");
 	}else{
 		warnEmail.textContent = "Good!";
 		warnEmail.classList.remove("contactWarn");
 		warnEmail.classList.add("contactSuccess");
 	}
-	if(message.value.length < 10 || message.value.length > 300){
+	if(message.value.length < 10 || message.value.length > 300){		
 		warnMessage.textContent = "The message can contain between 10 and 200 characters";
+		warnMessage.classList.remove("contactSuccess");
 		warnMessage.classList.add("contactWarn");
 	}else{
 		warnMessage.textContent = "Good!";
