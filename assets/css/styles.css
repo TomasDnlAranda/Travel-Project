@@ -592,6 +592,10 @@ transform: translate(0px) scale(1);
     cursor: pointer;
     border-radius: 1rem;
 }
+.book-now p{
+    color: white;
+    margin: 0;
+}
 
 .book-now:hover {
     background-color: var(--orange-hover-);
