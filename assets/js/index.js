@@ -178,6 +178,28 @@ function handleInput() {
   document.querySelector('#name').style.backgound = checked ? '#ffffff' : '#303843';
 }
 
+
+const btnLogin = document.querySelector("body > header > nav > div.navbar__icons > i.fas.fa-user.icon-navbar")
+const login = document.getElementById('login')
+
+btnLogin.addEventListener("click", (e) => {
+	if (login.classList.contains("login-remove")) {
+		login.classList.remove('login-remove')
+	    login.classList.add('login-agg')
+		login.style.background = "#00000065"
+		return
+	}
+	if (login.classList.contains("login-agg")) {	
+		login.classList.remove('login-agg')
+	    login.classList.add('login-remove')
+		return
+	}
+
+    login.classList.toggle("login-agg");
+    login.classList.toggle("login-remove");
+})
+
+
 input.addEventListener('input', handleInput);
 
 

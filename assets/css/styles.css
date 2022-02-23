@@ -18,7 +18,7 @@
     --color-: #8f8f8f;
     --bg-input-: #eeeeee;
     --bg-form-: #f0f0f0;
-
+    --bg-form-: #00000065;
 }
 /* ============= end variable ============= */
 
@@ -283,11 +283,46 @@ transform: translate(0px) scale(1);
 /* ============= end header area ============= */
 
 
-#login {
-    position: absolute;
-    top: 20rem;
-    left: 20rem;
+.login-agg {
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-remove {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: none;
+    height: 100vh;
+}
+
+#login form {
+    padding: 1rem;
+    background: var(--white-);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 35%;
+}
+
+#login form h3 {
+    color: var(--gray-light);
+}
+
+#login form h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
 #login form {
@@ -296,7 +331,38 @@ transform: translate(0px) scale(1);
     margin: 0 auto;
 }
 
+#login form input {
+    margin: .5rem 0;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    text-transform: none;
+    outline: none;
+    border: 1px solid var(--gray-light);
+    padding: .25rem;
+    font-size: .75rem;
+}
 
+#ModalSubmit {
+    background: var(--orange-);
+    backdrop-filter: blur(5px);
+    text-transform: none;
+    color: var(--white-);
+    border: none;
+    outline: none;
+}
+
+#login form div label {
+    font-size: .75rem;
+}
+
+.login__forget-password p {
+    font-size: .75rem;
+}
+
+.login__forget-password p a {
+    text-decoration: none;
+    color: var(--orange-);
+}
 
 /* ============= start home area ============= */
 #book {
@@ -457,7 +523,8 @@ transform: translate(0px) scale(1);
     background: var(--white-);
     backdrop-filter: blur(5px);
     border-radius: 1rem;
-    text-transform: none;border: 1px solid var(--white-);
+    text-transform: none;
+    border: 1px solid var(--white-);
 }
 
 .book .row form .inputBox .input-main:focus {
