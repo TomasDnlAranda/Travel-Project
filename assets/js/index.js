@@ -26,6 +26,7 @@ const msgErrorLeaving = document.getElementById('msgErrorLeaving');
 const textMenuMobile = document.querySelectorAll('.menu__item-mobile-text');
 
 const validarForm = (e) => {
+	e.preventDefault();
 
 	const regExpOnlyLetters = /^[a-zA-Z ]*$/;
 	const numberHowMany = parseInt(howMany.value)
@@ -186,12 +187,44 @@ function handleInput() {
 
 const btnLogin = document.querySelector("body > header > nav > div.navbar__icons > i.fas.fa-user.icon-navbar")
 const login = document.getElementById('login')
+const btnModalClose = document.getElementById('modalClose')
+const submitFormModal = document.getElementById('ModalSubmit')
+const textFormModal = document.getElementById('ModalEmail')
+const passwordFormModal = document.getElementById('ModalPassword')
+const msgErrorEmailModal = document.getElementById('msgErrorModalEmail')
+const msgErrorPasswordModal = document.getElementById('msgErrorModalPassword')
+const formModal = document.getElementById('formModal')
+
+submitFormModal.addEventListener("click", (e) => {
+	
+	e.preventDefault();
+	const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	if (!regexEmail.test(textFormModal.value) || !textFormModal.value.trim()) {
+		msgErrorEmailModal.style.color = "#ec0000"
+		msgErrorEmailModal.textContent = "Please enter a valid mail"
+		textFormModal.style.border = "1px solid #ec0000"
+	} else {
+		msgErrorEmailModal.style.color = "#017c01"
+		msgErrorEmailModal.textContent = "Nice!"
+		textFormModal.style.border = "1px solid #017c01"
+	}
+
+	if (passwordFormModal.value.length < 8 || !passwordFormModal.value.trim()) {
+		msgErrorPasswordModal.style.color = "#ec0000"
+		msgErrorPasswordModal.textContent = "The password must have at least 8 characters"
+		passwordFormModal.style.border = "1px solid #ec0000"
+	} else {
+		msgErrorPasswordModal.style.color = "#017c01"
+		msgErrorPasswordModal.textContent = "Nice!"
+		passwordFormModal.style.border = "1px solid #017c01"
+	}
+})
 
 btnLogin.addEventListener("click", (e) => {
 	if (login.classList.contains("login-remove")) {
 		login.classList.remove('login-remove')
 	    login.classList.add('login-agg')
-		login.style.background = "#00000065"
+		login.style.background = "#00000095"
 		return
 	}
 	if (login.classList.contains("login-agg")) {	
@@ -199,10 +232,15 @@ btnLogin.addEventListener("click", (e) => {
 	    login.classList.add('login-remove')
 		return
 	}
-
     login.classList.toggle("login-agg");
     login.classList.toggle("login-remove");
 })
+
+btnModalClose.addEventListener("click", (e) => {
+	login.classList.remove('login-agg')
+	login.classList.add('login-remove')
+})
+
 
 
 input.addEventListener('input', handleInput);

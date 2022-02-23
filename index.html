@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -149,22 +149,32 @@
 
 
     
+    <!-- ============================ start modal login area ============================ -->
     <div class="login-remove" id="login">
-        <form action="">
+        <form action="formModal" id="formModal">
+            <div class="container-icon">
+                <i class="fa fa-times" id="modalClose"></i>
+            </div>
+            <hr>
             <h3>LOGIN</h3>
-            <input type="text" placeholder="enter your email">
-            <input type="password" placeholder="enter your password">
-            <input type="submit" id="ModalSubmit">
-            <div>
-                <input type="checkbox" name="" id="">
-                <label for="">Remember Me</label>
+            <div class="container-input">
+                <input type="text" placeholder="enter your email" id="ModalEmail" required>
+                <p id="msgErrorModalEmail"></p>
+                <input type="password" placeholder="enter your password" id="ModalPassword" required>
+                <p id="msgErrorModalPassword"></p>
+                <input type="submit" id="ModalSubmit">
+            </div>
+            <div class="container-checkbox">
+                <input type="checkbox" name="checkboxModal" id="checkboxModal">
+                <label for="checkbox">Remember Me</label>
             </div>
             <div class="login__forget-password">
-                <p>Forget Password <a href="">Click Here</a></p>
-                <p>Don't Have An Account <a href="">Click Here</a></p>
+                <p>Forget Password <a href="#">Click Here</a></p>
+                <p>Don't Have An Account <a href="#">Click Here</a></p>
             </div>
         </form>
     </div>
+    <!-- ============================ end modal login area ============================ -->
 
 
 

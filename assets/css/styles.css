@@ -282,6 +282,8 @@ transform: translate(0px) scale(1);
 /* ============= end header area ============= */
 
 
+
+/* ============= start modal login area ============= */
 .login-agg {
     position: fixed;
     top: 0;
@@ -305,63 +307,92 @@ transform: translate(0px) scale(1);
 }
 
 #login form {
-    padding: 1rem;
+    padding: .50rem .50rem 1rem;
     background: var(--white-);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    width: 35%;
-    height: 35%;
+    width: 80%;
 }
 
 #login form h3 {
     color: var(--gray-light);
-}
-
-#login form h3 {
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 2.25rem;
+    margin: 1rem 0;
 }
 
-#login form {
-    padding: 1rem;
-    background: var(--white-);
-    margin: 0 auto;
+#login form .container-icon i {
+    font-size: 2rem;
+    display: flex;
+    justify-content: end;
+    margin-bottom: .50rem;
+    color: var(--orange-);
+    cursor: pointer;
 }
 
-#login form input {
+.container-checkbox {
+    margin: .75rem 1.25rem;
+}
+
+#login form .container-input {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+}
+
+#login form .container-input p {
+    margin: 0 1rem;
+    font-size: .75rem;
+}
+
+#ModalEmail, #ModalPassword {
     margin: .5rem 0;
     backdrop-filter: blur(5px);
     border-radius: 1rem;
     text-transform: none;
     outline: none;
     border: 1px solid var(--gray-light);
-    padding: .25rem;
-    font-size: .75rem;
+    padding: .50rem;
+    font-size: 1rem;
+    margin-left: .50rem;
 }
 
 #ModalSubmit {
     background: var(--orange-);
+    cursor: pointer;
+    margin-top: .50rem;
     backdrop-filter: blur(5px);
     text-transform: none;
     color: var(--white-);
     border: none;
     outline: none;
-}
-
-#login form div label {
-    font-size: .75rem;
+    border-radius: 1rem;
+    padding: .50rem;
+    font-size: 1rem;
 }
 
 .login__forget-password p {
     font-size: .75rem;
+    margin: .25rem 0
 }
 
 .login__forget-password p a {
     text-decoration: none;
     color: var(--orange-);
 }
+
+.login__forget-password p {
+    font-size: .85rem;
+}
+
+.login__forget-password {
+    margin: 0 1rem .50rem;
+}
+/* ============= end modal login area ============= */
+
+
 
 /* ============= start home area ============= */
 #book {
@@ -1191,6 +1222,15 @@ footer {
     .footer__card {
         width: 22.5%;
     }
+
+    #login form {
+        padding: .50rem .50rem 1rem;
+        background: var(--white-);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
     
 }
 /* ============= end breakpoint 640px ============= */
@@ -1375,6 +1415,15 @@ footer {
 
     .footer__container-card, .footer__container-card-2 {
         width: 50%;
+    }
+
+    #login form {
+        padding: .50rem .50rem 1rem;
+        background: var(--white-);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
     }
     
 }
