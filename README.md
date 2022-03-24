@@ -1,4 +1,4 @@
-# Project-Travel
+# Travel-Project
 
 _It is a project where I consume the rick and morty api, and generate a search engine for the characters of said series, saving the data in the local storage_
 
